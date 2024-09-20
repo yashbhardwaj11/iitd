@@ -65,7 +65,7 @@ const EventInfo = () => {
       <div className="w-full lg:w-2/3 bg-white text-black rounded-lg p-4 lg:p-6 relative">
         {/* Tab Buttons */}
         <div className="relative flex justify-between border-b border-gray-300 space-x-2 sm:space-x-4">
-          {tabs.map((tab, index) => (
+          {tabs.map((tab) => (
             <button
               key={tab.value}
               className={`flex-1 py-2 text-center text-xs sm:text-sm lg:text-lg font-bold transition-colors duration-300 ${
