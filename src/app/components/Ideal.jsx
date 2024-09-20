@@ -21,7 +21,7 @@ const SponsorComponent = () => {
         <div className="bg-[#5D7BA1] p-6 rounded-md shadow-md transition-all duration-500 hover:translate-x-4 hover:-translate-y-4 hover:shadow-[-8px_8px_0px_0px_rgba(0,0,0,0.8)]">
         <h2 className="text-lg font-semibold">Good Swag/Brand Material</h2>
           <p className="mt-2 text-sm">
-            It is always good to have swag. This can be t-shirts with a simple logo or stickers, mugs, jackets, handy stuff, etc. We'll have random giveaways throughout the event, so this is a great way to make sure every participant walks away with your brand!
+            It is always good to have swag. This can be t-shirts with a simple logo or stickers, mugs, jackets, handy stuff, etc. We&apos;ll have random giveaways throughout the event, so this is a great way to make sure every participant walks away with your brand!
           </p>
         </div>
         <div className="bg-[#5D7BA1] p-6 rounded-md shadow-md transition-all duration-500 hover:translate-x-4 hover:-translate-y-4 hover:shadow-[-8px_8px_0px_0px_rgba(0,0,0,0.8)]">

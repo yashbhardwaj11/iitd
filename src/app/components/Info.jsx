@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import img from '../../../public/bg-venue2.png'
 import { FaRegClock } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
-import Image from "next/image";
 const EventInfo = () => {
   const [activeTab, setActiveTab] = useState("about");
 
@@ -102,7 +100,7 @@ const EventInfo = () => {
 they really want to solve.</p>
               <p className="mb-5" >
               Integrated throughout the day will be examples of disruptive ideas Pan India, many of which  &lsquo;Silicon
- Valley comes to India&apos; hasn't witnes sed yet, as well as tips on taking the fear out of
+ Valley comes to India&apos; hasn&apos;t witnes sed yet, as well as tips on taking the fear out of
  making
  the leap
 to

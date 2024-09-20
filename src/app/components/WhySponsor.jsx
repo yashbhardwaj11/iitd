@@ -15,14 +15,14 @@ find a diverse community of students, developers, designers, entrepreneurs and i
 coming along to build cool things, solve problems and have fun.</p>
 
         <p>The hackathon allows sponsors to exhibit awesome products and ideas that can be used to aid
-programmers in their projects. Becoming a sponsor will help your company's public relations, brand
+programmers in their projects. Becoming a sponsor will help your company&apos;s public relations, brand
 perception, and product popularity.</p>
 
         <p>By sponsoring, your company is able to form a candid relationship with the programmers of the future
 and receive opportunities to engage those programmers with technologies that they will grow to love
 and use.</p>
 
-        <p>Sponsorship will give you access to developers with lots of potential and industry's upcoming talents.
+        <p>Sponsorship will give you access to developers with lots of potential and industry&apos;s upcoming talents.
 Although participants are free to build their own hacks, sponsors can influence them through: Branded
 prizes, API, Demos, Swag and Tech talks.</p>
 </div>

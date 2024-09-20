@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 // Define the dynamic content array
@@ -32,7 +33,7 @@ const MentorshipStage = ({
     <div className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row  space-y-6 lg:space-y-0 lg:space-x-8">
       {/* Left Section: Image */}
       <div className="w-full lg:w-1/3">
-        <img
+        <Image
           src={imageUrl}
           alt="Hackathon Stage"
           className="w-full h-[30vw] rounded-lg shadow-lg"

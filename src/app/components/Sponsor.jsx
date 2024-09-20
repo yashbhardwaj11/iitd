@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // components/SponsorsAndBenefits.js
 export default function SponsorsAndBenefits() {
     return (
@@ -8,22 +10,22 @@ export default function SponsorsAndBenefits() {
         </h1>
         
         <div className="flex flex-wrap justify-around items-center space-x-6 mb-12">
-          <img 
+          <Image 
             src="/nebula 1.png" 
             alt="Nebula Incubator" 
             className="h-24 sm:h-32 lg:h-36"
           />
-          <img 
+          <Image 
             src="/TBG Logo 1.png" 
             alt="The Brand Global" 
             className="h-24 sm:h-32 lg:h-36"
           />
-          <img 
+          <Image 
             src="/USIBC.png" 
             alt="US India Blockchain Council" 
             className="h-24 sm:h-32 lg:h-36"
           />
-          <img 
+          <Image 
             src="/rdv_logo_red.png" 
             alt="Another Logo" 
             className="h-24 sm:h-32 lg:h-36"

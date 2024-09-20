@@ -8,7 +8,7 @@ export default function Proceedings() {
   
         <div className="space-y-6 text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
           <p>
-            In the event's introduction, Mr. Pravash Dey shared his experiences on the importance of hackathon culture in academia and industry, discussing real-world problem-solving, new business challenges, and the significance of networking. Mr. Kunal Varma followed with insights on wireframing tools and financial guidance. Participants formed 13 teams through a speed-dating session and began working on their ideas.
+            In the event&apos;s introduction, Mr. Pravash Dey shared his experiences on the importance of hackathon culture in academia and industry, discussing real-world problem-solving, new business challenges, and the significance of networking. Mr. Kunal Varma followed with insights on wireframing tools and financial guidance. Participants formed 13 teams through a speed-dating session and began working on their ideas.
           </p>
   
           <p>
