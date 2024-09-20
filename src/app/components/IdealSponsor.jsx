@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const IdealSponsorComponent = () => {
@@ -13,9 +14,12 @@ const IdealSponsorComponent = () => {
         <div className="bg-[#007F40] py-20  hover:bg-[#5D7BA1] text-white p-6 flex flex-col items-center text-center hover:scale-105 md:hover:scale-110 transition-all duration-700 ">
           <div className="text-4xl mb-4">
             {/* Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v1m0 6v2m0 4v1m-7-8h14" />
-            </svg>
+            <Image
+              src='/plus.png' alt='image'
+              width={24}
+              height={24}
+              className="object-contain w-full h-full"
+            />
           </div>
           <h2 className="text-lg font-semibold">Interesting API/Software</h2>
           <p className="mt-4 text-sm">
@@ -27,9 +31,12 @@ const IdealSponsorComponent = () => {
         <div className="bg-[#007F40] py-20  hover:bg-[#5D7BA1] text-white p-6 flex flex-col items-center text-center hover:scale-105 md:hover:scale-110 transition-all duration-700 ">
           <div className="text-4xl mb-4">
             {/* Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 10l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <Image
+              src='/laptop.png' alt='image'
+              width={24}
+              height={24}
+              className="object-contain w-full h-full"
+            />
           </div>
           <h2 className="text-lg font-semibold">Internship Opportunities</h2>
           <p className="mt-4 text-sm">
@@ -41,9 +48,12 @@ const IdealSponsorComponent = () => {
         <div className="bg-[#007F40] py-20  hover:bg-[#5D7BA1] text-white p-6 flex flex-col items-center text-center hover:scale-105 md:hover:scale-110 transition-all duration-700 ">
           <div className="text-4xl mb-4">
             {/* Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" />
-            </svg>
+            <Image
+              src='/sign.png' alt='image'
+              width={24}
+              height={24}
+              className="object-contain w-full h-full"
+            />
           </div>
           <h2 className="text-lg font-semibold">Good Swag/Brand Material</h2>
           <p className="mt-4 text-sm">
@@ -55,9 +65,12 @@ const IdealSponsorComponent = () => {
         <div className="bg-[#007F40] py-20  hover:bg-[#5D7BA1] text-white p-6 flex flex-col items-center text-center hover:scale-105 md:hover:scale-110 transition-all duration-700 ">
           <div className="text-4xl mb-4">
             {/* Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 11l3-3m0 0l3 3m-3-3v12" />
-            </svg>
+            <Image
+              src='/mentor.png' alt='image'
+              width={24}
+              height={24}
+              className="object-contain w-full h-full"
+            />
           </div>
           <h2 className="text-lg font-semibold">Mentors and Representatives</h2>
           <p className="mt-4 text-sm">
