@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-
+import image from '../../../public/image.png'
 // Define the dynamic content array
 const mentorshipStages = [
   {
@@ -14,7 +14,6 @@ const mentorshipStages = [
       "Participants will receive constructive feedback on their concepts from mentors and peers.",
     expectedOutcomes:
       "Clear, innovative ideas aligned with the problem statements.",
-    imageUrl: "/image.png", // Replace with actual image path
   },
 
   // Add more stages as needed
@@ -27,14 +26,13 @@ const MentorshipStage = ({
   mentorshipFocus,
   feedbackLoops,
   expectedOutcomes,
-  imageUrl,
 }) => {
   return (
     <div className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row  space-y-6 lg:space-y-0 lg:space-x-8">
       {/* Left Section: Image */}
       <div className="w-full lg:w-1/3">
         <Image
-          src={imageUrl}
+          src={image}
           alt="Hackathon Stage"
           className="w-full h-[30vw] rounded-lg shadow-lg"
         />
@@ -91,7 +89,6 @@ const MentorshipStagesList = () => {
           mentorshipFocus={stage.mentorshipFocus}
           feedbackLoops={stage.feedbackLoops}
           expectedOutcomes={stage.expectedOutcomes}
-          imageUrl={stage.imageUrl}
         />
       ))}
     </div>
