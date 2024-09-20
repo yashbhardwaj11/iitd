@@ -1,0 +1,98 @@
+"use client";
+import React from "react";
+import { SiTicktick } from "react-icons/si";
+
+const ChallengesTable = () => {
+  const data = [
+    {
+      problem: "Military Branch Innovations",
+      focus: ["Army", "Air Force", "Naval"],
+      challenge:
+        "Develop technology-driven solutions that enhance operational efficiency, communication, and strategic planning across different military branches.",
+    },
+    {
+      problem: "Empowering Women in Defense",
+      focus: ["Women in Army", "Special Forces", "Paramilitary"],
+      challenge:
+        "Create initiatives or platforms that promote the inclusion and advancement of women in defense roles, particularly in special operations and paramilitary forces.",
+    },
+    {
+      problem: "iDEX Challenges",
+      focus: ["Innovaton for Defense Excellence (iDEX)"],
+      challenge:
+        "Identify and address key challenges faced by iDEX initiatives, promoting innovation and collaboration within the defense ecosystem.",
+    },
+    {
+      problem: "Aditi Scheme Exploration",
+      focus: ["DeepTech", "Medical", "ConsumerTech", "Fintech", "Supply Chain", "Banking"],
+      challenge:
+        "Develop solutions that align with the objectives of the Aditi Scheme, fostering advancements in various technological domains including healthcare, finance, and supply chains.",
+    },
+    {
+      problem: "Women in Tech",
+      focus: ["Representation", "Inclusivity"],
+      challenge:
+        "Propose strategies or platforms to increase women's participation in technology sectors, addressing barriers to entry and promoting mentorship.",
+    },
+    {
+      problem: "Emerging Technologies",
+      focus: ["IoT", "Cloud Computing", "Cybersecurity", "DeFi", "Blockchain"],
+      challenge:
+        "Innovate solutions utilizing emerging technologies to solve real-world problems, enhancing security, efficiency, and user experience in various sectors.",
+    },
+    {
+      problem: "Artificial Intelligence",
+      focus: ["AI Applications"],
+      challenge:
+        "Develop AI-based solutions that can be applied to one or more of the above areas, improving decision-making, automation, or user interaction.",
+    },
+  ];
+
+  return (
+    <div className="container overflow-scroll    mx-auto p-4 lg:p-8">
+      <table className="min-w-full border-2  text-left table-auto">
+        {/* Table Header */}
+        <thead>
+          <tr className="text-center text-gray-700 text-xs md:text-sm lg:text-base font-bold">
+            <th className="px-4 py-2 border-2">S. No.</th>
+            <th className="px-4 py-2 border-2">Problem Statement</th>
+            <th className="px-4 py-2 border-2">Focus Area</th>
+            <th className="px-4 py-2 border-2">Challenge</th>
+          </tr>
+        </thead>
+
+        {/* Table Body */}
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index} className="text-xs  md:text-sm lg:text-base border">
+              <td className="px-4 py-2 border-2">{index + 1}</td>
+              <td className="px-4 py-2 border-2">{item.problem}</td>
+              <td className="px-4 py-2 border-2 space-y-2">
+                {item.focus.map((area, idx) => (
+                  <div key={idx} className="flex items-center space-x-2">
+                    <span className="text-green-500"><SiTicktick />
+                    </span>
+                    <span>{area}</span>
+                  </div>
+                ))}
+              </td>
+              <td className="px-4 py-2 border">{item.challenge}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Footer Section */}
+      <div className="mt-6 text-center">
+        <p className="text-sm md:text-base lg:text-lg">
+          Participants are encouraged to collaborate, think outside the box, and leverage their diverse skill sets to address these challenges. Together, we can create impactful solutions that benefit our communities and industries.
+        </p>
+        <button className="mt-4 bg-[#007F40] hover:bg-green-600 text-white font-bold py-2 px-6 rounded-sm">
+          DOWNLOAD PDF
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ChallengesTable;
