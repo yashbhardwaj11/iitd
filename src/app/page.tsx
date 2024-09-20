@@ -9,6 +9,7 @@ import SponsorsAndBenefits from './components/Sponsor'
 import SponsorComponent from './components/Ideal'
 import IdealSponsorComponent from './components/IdealSponsor'
 import SupportUs from './components/Support'
+import Footer from './components/Footer'
 export default function Home() {
   return (
    <div className="overflow-hidden" >
@@ -22,6 +23,7 @@ export default function Home() {
     <SponsorComponent/>
     <IdealSponsorComponent/>
     <SupportUs/>
+    <Footer/>
    </div>
   );
 }
