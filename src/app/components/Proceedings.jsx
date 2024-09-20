@@ -1,7 +1,7 @@
 // components/HackathonBrief.js
 export default function Proceedings() {
     return (
-      <div className="w-full mx-auto lg:px-32 py-12">
+      <div className="w-full mx-auto px-4 lg:px-32 py-12">
         <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold  mb-8">
           BRIEF PROCEEDING OF OUR PREVIOUS HACK-A-THON
         </h1>

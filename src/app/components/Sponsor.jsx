@@ -3,7 +3,7 @@ import React from "react";
 // components/SponsorsAndBenefits.js
 export default function SponsorsAndBenefits() {
     return (
-      <div className=" mx-auto px-6 lg:px-32 py-12">
+      <div id="Sponsor" className=" mx-auto px-6 lg:px-32 py-12">
         {/* Sponsors and Partners Section */}
         <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-8">
           SPONSORS AND PARTNERS

@@ -1,6 +1,8 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { SiTicktick } from "react-icons/si";
+import { HiDownload } from "react-icons/hi";
 
 const ChallengesTable = () => {
   const data = [
@@ -49,7 +51,9 @@ const ChallengesTable = () => {
   ];
 
   return (
-    <div className="container overflow-scroll    mx-auto p-4 lg:p-8">
+    <div id="Fields" className="container overflow-scroll mx-auto p-4 lg:p-8">
+      <h2  className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-8 text-center " >HACKATHON PROBLEM STATEMENT</h2>
+      <p className="space-y-6 text-sm sm:text-base lg:text-lg leading-relaxed text-center">This document outlines the problem statements for our upcoming hackathon. Participants are encouraged to explore innovative solutions across various domains, addressing specific challenges faced by the Army, technology sectors, and women&apos;s representation in these fields.</p>
       <table className="min-w-full border-2  text-left table-auto">
         {/* Table Header */}
         <thead>
@@ -87,9 +91,16 @@ const ChallengesTable = () => {
         <p className="text-sm md:text-base lg:text-lg">
           Participants are encouraged to collaborate, think outside the box, and leverage their diverse skill sets to address these challenges. Together, we can create impactful solutions that benefit our communities and industries.
         </p>
-        <button className="mt-4 bg-[#007F40] hover:bg-green-600 text-white font-bold py-2 px-6 rounded-sm">
-          DOWNLOAD PDF
-        </button>
+        <div className='flex mb-5 items-center justify-center'>
+      <Link
+        href="#"
+        className="bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300"
+      >
+        DOWNLOAD PDF
+        {/* Icon */}
+        <HiDownload className="ml-5 hidden group-hover:block transition-all duration-1000 group-hover:translate-x-2 transform" />
+      </Link>
+    </div>
       </div>
     </div>
   );

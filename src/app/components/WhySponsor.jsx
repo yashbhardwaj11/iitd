@@ -2,7 +2,7 @@ import React from 'react'
 
 function WhySponsor() {
   return (
-    <div className="w-full mx-auto lg:px-32 py-12">
+    <div className="w-full mx-auto px-4 lg:px-32 py-12">
         <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold  mb-8">Why Sponsor</h2>
         <div className="space-y-6 text-sm sm:text-base lg:text-lg leading-relaxed text-justify">
         <p>Technology entrepreneurship has taken a whole new meaning in the last 5 years amongst the

@@ -18,9 +18,9 @@ const EventInfo = () => {
   };
 
   return (
-    <div className=" text-white flex flex-col items-stretch  lg:flex-row  p-4 lg:p-8 space-y-6 lg:space-y-0 lg:space-x-6">
+    <div id="Hero2" className=" text-white flex flex-col items-stretch  lg:flex-row  p-4 lg:p-8 space-y-6 lg:space-y-0 lg:space-x-6">
       {/* Left section: Event Information */}
-      <div className="w-full relative lg:w-2/5  h-full   space-x-10 space-y-10  bg-cover rounded-lg p-4 lg:p-6 "
+      <div className="w-full relative lg:w-2/5   space-x-10 space-y-10  bg-cover rounded-lg p-4 lg:p-6 "
         style={{
           backgroundImage: "url('/bg-venue.png')",
            // Adjust to your actual image path

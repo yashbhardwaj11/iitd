@@ -10,6 +10,7 @@ import SponsorComponent from './components/Ideal'
 import IdealSponsorComponent from './components/IdealSponsor'
 import SupportUs from './components/Support'
 import Footer from './components/Footer'
+import Carousel from './components/Carousel'
 export default function Home() {
   return (
    <div className="overflow-hidden" >
@@ -18,8 +19,8 @@ export default function Home() {
     <ChallengesTable/>
     <MentorshipStagesList/>
     <Proceedings/>
+    <Carousel/>
     <WhySponsor/>
-    <SponsorsAndBenefits/>
     <SponsorComponent/>
     <IdealSponsorComponent/>
     <SupportUs/>
