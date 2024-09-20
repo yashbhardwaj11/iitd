@@ -13,22 +13,22 @@ export default function SponsorsAndBenefits() {
           <Image 
             src="/nebula 1.png" 
             alt="Nebula Incubator" 
-            className="w-full h-24 sm:h-32 lg:h-36"
+            className=" h-24 sm:h-32 lg:h-36"
           />
           <Image 
             src="/TBG Logo 1.png" 
             alt="The Brand Global" 
-            className=" w-full h-24 sm:h-32 lg:h-36"
+            className=" h-24 sm:h-32 lg:h-36"
           />
           <Image 
             src="/USIBC.png" 
             alt="US India Blockchain Council" 
-            className="w-full h-24 sm:h-32 lg:h-36"
+            className=" h-24 sm:h-32 lg:h-36"
           />
           <Image 
             src="/rdv_logo_red.png" 
             alt="Another Logo" 
-            className=" w-full h-24 sm:h-32 lg:h-36"
+            className="  h-24 sm:h-32 lg:h-36"
           />
         </div>
   
