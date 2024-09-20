@@ -21,6 +21,7 @@ export default function Home() {
     <Proceedings/>
     <Carousel/>
     <WhySponsor/>
+    <SponsorsAndBenefits/>
     <SponsorComponent/>
     <IdealSponsorComponent/>
     <SupportUs/>
