@@ -36,10 +36,10 @@ export default function SponsorsAndBenefits() {
         <div className="flex justify-center items-center  bg-white px-4 lg:px-8">
       <div className="max-w-6xl w-full py-12">
         {/* Benefits and API Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-12">
           
           {/* Benefits Include Section */}
-          <div className="relative pr-6">
+          <div className="relative md:pr-6">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center md:text-left text-green-700 mb-6">
               BENEFITS INCLUDE
             </h2>
@@ -55,7 +55,7 @@ export default function SponsorsAndBenefits() {
           </div>
 
           {/* Have an API Section */}
-          <div className="pl-6">
+          <div className="md:pl-6">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center md:text-left text-green-700 mb-6">
               HAVE AN API?
             </h2>
