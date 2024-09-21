@@ -48,6 +48,14 @@ const SponsorComponent = () => {
           <tbody>
             {/* Add rows based on the table in the image */}
             <tr>
+              <td className=" p-2">Cost</td>
+              <td className=" p-2 text-blue-400 text-center">Rs 15,000</td>
+              <td className=" p-2 text-blue-400 text-center">Rs 30,000</td>
+              <td className=" p-2 text-blue-400 text-center">Rs 60,000</td>
+              <td className=" p-2 text-blue-400 text-center">Rs 1,00,000</td>
+              <td className=" p-2 text-blue-400 text-center">Rs 2,00,000</td>
+            </tr>
+            <tr>
               <td className=" p-2">Thanked at Kickoff & Awards</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
@@ -130,7 +138,7 @@ const SponsorComponent = () => {
             <tr>
               <td className=" p-2">Get Participant Resumes</td>
               <td className=" p-2 text-center">No</td>
-              <td className=" p-2 text-green-400 text-center">Yes</td>
+              <td className=" p-2  text-center">No</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
@@ -138,8 +146,8 @@ const SponsorComponent = () => {
             <tr>
               <td className=" p-2">Company Blurb in Participant Booklet</td>
               <td className=" p-2 text-center">No</td>
-              <td className=" p-2 text-green-400 text-center">Yes</td>
-              <td className=" p-2 text-green-400 text-center">Yes</td>
+              <td className=" p-2  text-center">No</td>
+              <td className=" p-2  text-center">No</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
             </tr>
@@ -147,7 +155,7 @@ const SponsorComponent = () => {
               <td className=" p-2">Logo on T-Shirt</td>
               <td className=" p-2 text-center">No</td>
               <td className=" p-2 text-center">No</td>
-              <td className=" p-2 text-green-400 text-center">Yes</td>
+              <td className=" p-2  text-center">No</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
             </tr>
@@ -155,7 +163,7 @@ const SponsorComponent = () => {
               <td className=" p-2">Conduct Workshop</td>
               <td className=" p-2 text-center">No</td>
               <td className=" p-2 text-center">No</td>
-              <td className=" p-2 text-green-400 text-center">Yes</td>
+              <td className=" p-2  text-center">No</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
             </tr>
@@ -163,7 +171,7 @@ const SponsorComponent = () => {
               <td className=" p-2">Pre-hackathon Social Media Post</td>
               <td className=" p-2 text-center">No</td>
               <td className=" p-2 text-center">No</td>
-              <td className=" p-2 text-green-400 text-center">Yes</td>
+              <td className=" p-2  text-center">No</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
               <td className=" p-2 text-green-400 text-center">Yes</td>
             </tr>

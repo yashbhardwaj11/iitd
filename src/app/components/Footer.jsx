@@ -14,14 +14,26 @@ const Footer = () => {
         </div>
         <div className='space-y-[5vw]' >
         {/* Center Section - Navigation Links */}
-        <nav className="flex space-x-6 text-gray-700 text-sm font-medium">
-          <Link href="#Hero">Home</Link>
-          <Link href="#Hero2">Registeration</Link>
-          <Link href="#Fields">Problem Statements</Link>
-          <Link href="#Sponsor">Sponsors</Link>
-          <Link href="#Footer">Contact Us</Link>
-          <Link href="/about-nebulla">About Nebulla</Link>
-        </nav>
+        <nav className="flex flex-wrap justify-center text-gray-700 text-sm font-medium">
+  {/* First row on small screens, all links on medium and larger */}
+  <div className="w-full flex justify-center space-x-4 sm:space-x-6 md:space-x-8 mb-4 md:mb-0">
+    <Link href="#Hero">Home</Link>
+    <Link href="#Hero2">Registeration</Link>
+    <Link href="#Fields">Problem Statements</Link>
+    {/* Hide extra links on small screens, show them on medium and larger */}
+    <Link href="#Sponsor" className="hidden md:inline">Sponsors</Link>
+    <Link href="#Footer" className="hidden md:inline">Contact Us</Link>
+    <Link href="/about-nebulla" className="hidden md:inline">About Nebulla</Link>
+  </div>
+  
+  {/* Second row for small screens only */}
+  <div className="w-full flex justify-center space-x-4 sm:space-x-6 md:hidden">
+    <Link href="#Sponsor">Sponsors</Link>
+    <Link href="#Footer">Contact Us</Link>
+    <Link href="/about-nebulla">About Nebulla</Link>
+  </div>
+</nav>
+
 
         {/* Right Section - Contact Info & Social Media */}
         <div className="text-center md:flex justify-between lg:text-right">
