@@ -51,17 +51,17 @@ const ChallengesTable = () => {
   ];
 
   return (
-    <div id="Fields" className="container overflow-scroll mx-auto p-4 lg:p-8">
-      <h2  className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-8 text-center " >HACKATHON PROBLEM STATEMENT</h2>
-      <p className="space-y-6 text-sm sm:text-base lg:text-lg leading-relaxed text-center">This document outlines the problem statements for our upcoming hackathon. Participants are encouraged to explore innovative solutions across various domains, addressing specific challenges faced by the Army, technology sectors, and women&apos;s representation in these fields.</p>
-      <table className="min-w-full border-2  text-left table-auto">
+    <div id="Fields" className=" mt-10 lg:mt-14 overflow-scroll mx-32">
+      <h2  className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-8 text-center " >HACKATHON PROBLEM STATEMENTS</h2>
+      <p className="space-y-6 max-w-6xl mx-auto mb-10 text-sm sm:text-base lg:text-lg leading-relaxed text-center">This document outlines the problem statements for our upcoming hackathon. Participants are encouraged to explore innovative solutions across various domains, addressing specific challenges faced by the Army, technology sectors, and women&apos;s representation in these fields.</p>
+      <table className="min-w-full border-2 mx-20 text-left table-auto">
         {/* Table Header */}
         <thead>
           <tr className="text-center text-gray-700 text-xs md:text-sm lg:text-base font-bold">
-            <th className="px-4 py-2 border-2">S. No.</th>
-            <th className="px-4 py-2 border-2">Problem Statement</th>
-            <th className="px-4 py-2 border-2">Focus Area</th>
-            <th className="px-4 py-2 border-2">Challenge</th>
+            <th className="px-4 py-2 border-2 border-black ">S. No.</th>
+            <th className="px-4 py-2 border-2 border-black">Problem Statement</th>
+            <th className="px-4 py-2 border-2 border-black">Focus Area</th>
+            <th className="px-4 py-2 border-2 border-black">Challenge</th>
           </tr>
         </thead>
 
@@ -69,9 +69,9 @@ const ChallengesTable = () => {
         <tbody>
           {data.map((item, index) => (
             <tr key={index} className="text-xs  md:text-sm lg:text-base border">
-              <td className="px-4 py-2 border-2">{index + 1}</td>
-              <td className="px-4 py-2 border-2">{item.problem}</td>
-              <td className="px-4 py-2 border-2 space-y-2">
+              <td className="px-4 py-2 border-2 border-black">{index + 1}</td>
+              <td className="px-4 py-2 border-2 border-black">{item.problem}</td>
+              <td className="px-4 py-2 border-2 border-black space-y-2">
                 {item.focus.map((area, idx) => (
                   <div key={idx} className="flex items-center space-x-2">
                     <span className="text-green-500"><SiTicktick />
@@ -80,7 +80,7 @@ const ChallengesTable = () => {
                   </div>
                 ))}
               </td>
-              <td className="px-4 py-2 border">{item.challenge}</td>
+              <td className="px-4 max-w-lg py-2 border-2 border-black">{item.challenge}</td>
             </tr>
           ))}
         </tbody>

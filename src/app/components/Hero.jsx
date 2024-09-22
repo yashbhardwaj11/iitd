@@ -9,11 +9,11 @@ function Hero() {
     }} >
        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className='z-10 mx-auto mt-12 px-8 ' >
+      <div className='z-10 mx-auto mt-5 px-8 ' >
         <object
           data="/logo.svg" // Adjust this to the actual path
           type="image/svg+xml"
-          className="w-32 h-32 md:w-40 md:h-40 mb-5 md:mb-14 "
+          className="w-32 h-32 md:w-40 md:h-40 mb-4 md:mb-5 "
         />
         <h1 className='text-white text-center font-extrabold text-4xl md:text-5xl lg:text-7xl md:mb-5 ' >DIGITAL INDIA HACKATHON &apos;24</h1>
         <p className='text-white mb-5 md:mb-10 text-lg md:text-2xl text-center max-w-5xl mx-auto ' >We are hosting 36hrs (two days-one night) Web- Mobile- Digital Media DAPP #Hackathon at IIT-Delhi designed for Blockchain (Web3)/ AI/ ML, SaaS entrepreneurs and Legal domain professionals focused in Defence, DeepTech and Women-led enterprises.</p>

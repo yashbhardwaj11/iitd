@@ -18,48 +18,59 @@ const EventInfo = () => {
   };
 
   return (
-    <div id="Hero2" className=" text-white flex flex-col items-stretch  lg:flex-row  p-4 lg:p-8 space-y-6 lg:space-y-0 lg:space-x-6">
+    <div id="Hero2" className=" text-white flex flex-col mt-5   lg:flex-row  p-4 lg:p-8 space-y-6 lg:space-y-0 ">
       {/* Left section: Event Information */}
-      <div className="w-full relative lg:w-2/5   space-x-10 space-y-10  bg-cover rounded-lg p-4 lg:p-6 "
-        style={{
-          backgroundImage: "url('/bg-venue.png')",
-           // Adjust to your actual image path
-        }}
-      >
-        {/* <Image src={img} className="w-full  absolute bottom-0 left-0" alt="image" /> */}
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">EVENT INFORMATION</h2>
-        <div className="text-white flex items-center space-x-5 " >
-          <FaMapMarkerAlt className="w-10 h-10" />
-          <div className="">
-          <h3 className="text-lg font-semibold">Location</h3>
-          <p className="text-sm lg:text-base">IIT Delhi Main Rd, IIT Campus, Hauz Khas, New Delhi, Delhi 110016</p>
-          </div>
-        </div>
-       
-       <div className="text-white flex items-center space-x-5" >
-        <FaRegClock className="w-10 h-10" />
-        <div className="">
-          <h3 className="text-lg font-semibold">Time Duration</h3>
-          <p className="text-sm lg:text-base">36 Hours</p>
-        </div>
-       </div>
-       
-       <div className="text-white flex items-center space-x-5" >
-        <RiTeamFill className="w-10 h-10" />
-        <div className=" ">
-          <h3 className="text-lg font-semibold">Team Size</h3>
-          <p className="text-sm lg:text-base">3-5 Members</p>
-        </div>
-       </div>
-        
-       <div className="text-white flex items-center space-x-5" >
-       <FaTrophy className="w-10 h-10" />
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold">Prize</h3>
-          <p className="text-sm lg:text-base">Cash Prize and Certificates</p>
-        </div>
-        </div>
+      <div
+  className="w-full relative lg:w-2/5 space-x-10 space-y-10 bg-cover rounded-sm p-4 lg:p-6"
+  style={{
+    backgroundImage: "url('/bg-venue.png')",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+
+  }}
+>
+  {/* The Image is now displayed as a background */}
+  <div className="absolute inset-0 flex flex-col  space-y-6 bg-black bg-opacity-60 p-6 rounded-sm">
+    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-white">
+      EVENT INFORMATION
+    </h2>
+
+    <div className="text-white flex items-center space-x-5">
+      <FaMapMarkerAlt className="w-10 h-10" />
+      <div>
+        <h3 className="text-lg font-semibold">Location</h3>
+        <p className="text-sm lg:text-base">
+          IIT Delhi Main Rd, IIT Campus, Hauz Khas, New Delhi, Delhi 110016
+        </p>
       </div>
+    </div>
+
+    <div className="text-white flex items-center space-x-5">
+      <FaRegClock className="w-10 h-10" />
+      <div>
+        <h3 className="text-lg font-semibold">Time Duration</h3>
+        <p className="text-sm lg:text-base">36 Hours</p>
+      </div>
+    </div>
+
+    <div className="text-white flex items-center space-x-5">
+      <RiTeamFill className="w-10 h-10" />
+      <div>
+        <h3 className="text-lg font-semibold">Team Size</h3>
+        <p className="text-sm lg:text-base">3-5 Members</p>
+      </div>
+    </div>
+
+    <div className="text-white flex items-center space-x-5">
+      <FaTrophy className="w-10 h-10" />
+      <div className="space-y-2">
+        <h3 className="text-lg font-semibold">Prize</h3>
+        <p className="text-sm lg:text-base">Cash Prize and Certificates</p>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Right section: Tabs and content */}
       <div className="w-full lg:w-2/3 bg-white text-black rounded-lg p-4 lg:p-6 relative">
@@ -68,8 +79,8 @@ const EventInfo = () => {
           {tabs.map((tab) => (
             <button
               key={tab.value}
-              className={`flex-1 py-2 text-center text-xs sm:text-sm lg:text-lg font-bold transition-colors duration-300 ${
-                activeTab === tab.value ? "text-green-500" : "text-black"
+              className={`flex-1 py-2 text-center text-xs sm:text-sm lg:text-2xl font-semibold transition-colors duration-300 ${
+                activeTab === tab.value ? "text-green-500" : "text-gray-400"
               }`}
               onClick={() => handleTabClick(tab.value)}
             >
