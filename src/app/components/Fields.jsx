@@ -51,10 +51,10 @@ const ChallengesTable = () => {
   ];
 
   return (
-    <div id="Fields" className=" mt-10 lg:mt-14 overflow-scroll mx-32">
-      <h2  className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-8 text-center " >HACKATHON PROBLEM STATEMENTS</h2>
-      <p className="space-y-6 max-w-6xl mx-auto mb-10 text-sm sm:text-base lg:text-lg leading-relaxed text-center">This document outlines the problem statements for our upcoming hackathon. Participants are encouraged to explore innovative solutions across various domains, addressing specific challenges faced by the Army, technology sectors, and women&apos;s representation in these fields.</p>
-      <table className="min-w-full border-2 mx-20 text-left table-auto">
+    <div id="Fields" className=" mt-10 lg:mt-14  overflow-scroll lg:mx-32">
+      <h2  className="text-3xl sm:text-3xl lg:text-5xl font-bold mb-8 text-center " >HACKATHON PROBLEM STATEMENTS</h2>
+      <p className="space-y-6 max-w-6xl mx-auto mb-10 text-lg sm:text-lg lg:text-xl leading-relaxed text-center">This document outlines the problem statements for our upcoming hackathon. Participants are encouraged to explore innovative solutions across various domains, addressing specific challenges faced by the Army, technology sectors, and women&apos;s representation in these fields.</p>
+      <table className="max-w-8xl mx-auto border-2  text-left table-auto">
         {/* Table Header */}
         <thead>
           <tr className="text-center text-gray-700 text-xs md:text-sm lg:text-base font-bold">
@@ -66,9 +66,9 @@ const ChallengesTable = () => {
         </thead>
 
         {/* Table Body */}
-        <tbody>
+        <tbody className="" >
           {data.map((item, index) => (
-            <tr key={index} className="text-xs  md:text-sm lg:text-base border">
+            <tr key={index} className="text-sm md:text-lg  border">
               <td className="px-4 py-2 border-2 border-black">{index + 1}</td>
               <td className="px-4 py-2 border-2 border-black">{item.problem}</td>
               <td className="px-4 py-2 border-2 border-black space-y-2">
@@ -80,15 +80,15 @@ const ChallengesTable = () => {
                   </div>
                 ))}
               </td>
-              <td className="px-4 max-w-lg py-2 border-2 border-black">{item.challenge}</td>
+              <td className="px-4 py-2 border-2 border-black">{item.challenge}</td>
             </tr>
           ))}
         </tbody>
       </table>
 
       {/* Footer Section */}
-      <div className="mt-6 text-center">
-        <p className="text-sm md:text-base lg:text-lg">
+      <div className="mt-6 md:mx-20  text-center">
+        <p className="text-sm md:text-base md:mb-10 lg:text-lg">
           Participants are encouraged to collaborate, think outside the box, and leverage their diverse skill sets to address these challenges. Together, we can create impactful solutions that benefit our communities and industries.
         </p>
         <div className='flex mb-5 items-center justify-center'>

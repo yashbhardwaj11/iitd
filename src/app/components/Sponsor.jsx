@@ -10,7 +10,7 @@ export default function SponsorsAndBenefits() {
         </h1>
         
         <div className="flex flex-wrap justify-around items-center space-x-6 mb-12">
-          <Image 
+          {/* <Image 
             src="/nebula 1.png" 
             alt="Nebula Incubator" 
             className=" h-24 sm:h-32 lg:h-36"
@@ -29,7 +29,7 @@ export default function SponsorsAndBenefits() {
             src="/rdv_logo_red.png" 
             alt="Another Logo" 
             className="  h-24 sm:h-32 lg:h-36"
-          />
+          /> */}
         </div>
   
         {/* Benefits and API Section */}
