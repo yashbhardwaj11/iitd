@@ -78,7 +78,7 @@ function WhySponsor() {
           viewport={{ once: true, amount: 0.2 }}
         >
           The hackathon allows sponsors to exhibit awesome products and ideas that can be used to aid
-          programmers in their projects. Becoming a sponsor will help your company's public relations, brand
+          programmers in their projects. Becoming a sponsor will help your company&apos;s public relations, brand
           perception, and product popularity.
         </motion.p>
 
@@ -99,7 +99,7 @@ function WhySponsor() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          Sponsorship will give you access to developers with lots of potential and industry's upcoming talents.
+          Sponsorship will give you access to developers with lots of potential and industry&apos;s upcoming talents.
           Although participants are free to build their own hacks, sponsors can influence them through: Branded
           prizes, API, Demos, Swag, and Tech talks.
         </motion.p>
