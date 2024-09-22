@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 import Carousel from './components/Carousel'
 export default function Home() {
   return (
-   <div className="overflow-hidden -space-y-16 " >
+   <div className="overflow-hidden space-y-16 " >
     <Hero/>
     <EventInfo/>
     <ChallengesTable/>
