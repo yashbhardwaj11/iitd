@@ -19,7 +19,7 @@ const IdealSponsorComponent = () => {
           >
             PAY NOW
         
-            <HiDownload className="ml-5 hidden group-hover:block transition-all duration-1000 group-hover:translate-x-2 transform" />
+           
           </Link>
         </div>
       {/* Title with animation */}
