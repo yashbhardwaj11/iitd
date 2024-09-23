@@ -52,7 +52,7 @@ export default function SponsorsAndBenefits() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* <motion.div variants={itemVariants} initial="hiddenLeft" whileInView="visible">
+        <motion.div variants={itemVariants} initial="hiddenLeft" whileInView="visible">
           <Image src="/nebula 1.png" alt="Nebula Incubator" className="h-24 sm:h-32 lg:h-36" />
         </motion.div>
 
@@ -66,7 +66,7 @@ export default function SponsorsAndBenefits() {
 
         <motion.div variants={itemVariants} initial="hiddenRight" whileInView="visible">
           <Image src="/rdv_logo_red.png" alt="Another Logo" className="h-24 sm:h-32 lg:h-36" />
-        </motion.div> */}
+        </motion.div>
 
       </motion.div> 
   
