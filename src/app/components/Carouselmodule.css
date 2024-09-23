@@ -1,0 +1,45 @@
+/* Carousel.module.css */
+.perspective {
+  perspective: 1200px;  /* Deep perspective to accentuate 3D effect */
+}
+
+.carouselContainer {
+  width: 100%; 
+  height: 100%;
+  position: relative;
+}
+
+.carouselItem {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: center;  /* Keep the center as the rotation point */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* Smooth transitions */
+}
+
+.carouselItem img {
+  border-radius: 10px; /* Optional: Add rounded corners to images */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 1024px) {
+  .carouselItem {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselItem {
+    width: 200px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselItem {
+    width: 150px;
+    height: 100px;
+  }
+}
+

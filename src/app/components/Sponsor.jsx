@@ -35,7 +35,7 @@ export default function SponsorsAndBenefits() {
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Sponsors and Partners Section */}
-      <motion.h1
+     <motion.h1
         className="text-4xl sm:text-4xl lg:text-6xl font-bold mb-8"
         variants={itemVariants}
         initial="hiddenUp"
@@ -52,7 +52,7 @@ export default function SponsorsAndBenefits() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <motion.div variants={itemVariants} initial="hiddenLeft" whileInView="visible">
+        {/* <motion.div variants={itemVariants} initial="hiddenLeft" whileInView="visible">
           <Image src="/nebula 1.png" alt="Nebula Incubator" className="h-24 sm:h-32 lg:h-36" />
         </motion.div>
 
@@ -66,8 +66,9 @@ export default function SponsorsAndBenefits() {
 
         <motion.div variants={itemVariants} initial="hiddenRight" whileInView="visible">
           <Image src="/rdv_logo_red.png" alt="Another Logo" className="h-24 sm:h-32 lg:h-36" />
-        </motion.div>
-      </motion.div>
+        </motion.div> */}
+
+      </motion.div> 
   
       {/* Benefits and API Section */}
       <motion.div className="flex justify-center items-center bg-white px-4 lg:px-8" variants={containerVariants}>

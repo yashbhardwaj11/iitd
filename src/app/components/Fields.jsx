@@ -4,6 +4,7 @@ import React from "react";
 import { SiTicktick } from "react-icons/si";
 import { HiDownload } from "react-icons/hi";
 import { motion, useInView } from "framer-motion";
+import "./shine.css"
 
 const ChallengesTable = () => {
   const data = [
@@ -115,7 +116,7 @@ const ChallengesTable = () => {
         <div className='flex mb-5 items-center justify-center'>
           <Link
             href="#"
-            className="bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300"
+            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
           >
             DOWNLOAD PDF
             {/* Icon */}

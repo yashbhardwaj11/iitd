@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Define the dynamic content array
 const mentorshipStages = [
@@ -56,19 +56,16 @@ const MentorshipStage = ({
   mentorshipFocus,
   feedbackLoops,
   expectedOutcomes,
-  onClick,
 }) => {
   return (
     <motion.div
-      className="w-full lg:w-1/2 cursor-pointer"
-      onClick={onClick}
+      className="w-full lg:w-1/2"
       initial="hidden"
       animate="visible"
       exit="exit"
       variants={transitionVariant}
-      transition={{ duration: 0.5 }}  // Adjust duration to control the speed of animation
+      transition={{ duration: 0.5 }}
     >
-      {/* Stage Section */}
       <div className="w-[80vw] md:w-[50vw]">
         <h2 className="text-lg lg:text-3xl font-bold mb-4">✶ {title}</h2>
 
@@ -96,39 +93,73 @@ const MentorshipStage = ({
 
 const MentorshipStagesList = () => {
   const [currentStageIndex, setCurrentStageIndex] = useState(0);
+  const isScrolling = useRef(false);
 
-  // Handle stage change on click
-  const handleStageChange = () => {
-    setCurrentStageIndex((prevIndex) =>
-      prevIndex === mentorshipStages.length - 1 ? 0 : prevIndex + 1
-    );
+  const handleScroll = (e) => {
+    if (isScrolling.current) return; // Prevent multiple stage changes during a single scroll
+    const deltaY = e.deltaY;
+
+    // Check scroll direction
+    if (deltaY > 0) {
+      // Scroll down
+      setCurrentStageIndex((prevIndex) =>
+        prevIndex === mentorshipStages.length - 1 ? 0 : prevIndex + 1
+      );
+    } else if (deltaY < 0) {
+      // Scroll up
+      setCurrentStageIndex((prevIndex) =>
+        prevIndex === 0 ? mentorshipStages.length - 1 : prevIndex - 1
+      );
+    }
+
+    isScrolling.current = true; // Set scrolling to true
+
+    setTimeout(() => {
+      isScrolling.current = false; // Reset scrolling status after a short delay
+    }, 500); // Adjust the delay for smoother transitions
   };
+
+  useEffect(() => {
+    // Add event listener for mouse wheel scroll
+    const container = document.getElementById("mentorship-container");
+    container.addEventListener("wheel", handleScroll);
+
+    return () => {
+      // Clean up event listener on component unmount
+      container.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
 
   const currentStage = mentorshipStages[currentStageIndex];
 
   return (
-    <div className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8">
+    <div
+      id="mentorship-container"
+      className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 overflow-y-auto" // Make the component scrollable
+      style={{ height: '80vh' }} // Set a fixed height for the component
+    >
       {/* Left Section: Image */}
       <h1 className="text-4xl flex md:hidden font-bold mb-4 text-center">
         HACKATHON MENTORSHIP AND COHORT STAGES
       </h1>
       <p className="text-lg flex md:hidden lg:text-xl mb-6 text-center">
-        The mentorship program is designed to support participants throughout the
-        hackathon, providing guidance and expertise at each stage of development.
-        Participants will progress through five key stages, each structured to foster
-        collaboration and innovation.
+        The mentorship program is designed to support participants throughout the hackathon, providing guidance and expertise at each stage of development. Participants will progress through five key stages, each structured to foster collaboration and innovation.
       </p>
+
+      {/* Smooth image transition with AnimatePresence */}
       <div className="w-full lg:w-1/3">
-        <motion.img
-          src={currentStage.image} // Use current stage image
-          alt="Hackathon Stage"
-          className="w-full h-[60vw] md:h-[35vw] rounded-lg shadow-lg cursor-pointer"
-          onClick={handleStageChange}  // Change stage on image click
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.5 }}
-        />
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentStageIndex}  // Use the stage index as the key to trigger re-render
+            src={currentStage.image} // Use current stage image
+            alt="Hackathon Stage"
+            className="w-full h-[60vw] md:h-[35vw] rounded-lg shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.7 }} // Smooth transition for 0.7 seconds
+          />
+        </AnimatePresence>
       </div>
 
       {/* Static Content: Heading and Intro Paragraph (No Animation) */}
@@ -137,23 +168,19 @@ const MentorshipStagesList = () => {
           HACKATHON MENTORSHIP AND COHORT STAGES
         </h1>
         <p className="text-sm hidden md:flex lg:text-xl mb-6 text-center">
-          The mentorship program is designed to support participants throughout the
-          hackathon, providing guidance and expertise at each stage of development.
-          Participants will progress through five key stages, each structured to foster
-          collaboration and innovation.
+          The mentorship program is designed to support participants throughout the hackathon, providing guidance and expertise at each stage of development. Participants will progress through five key stages, each structured to foster collaboration and innovation.
         </p>
 
         {/* Animated Stage Content */}
         <AnimatePresence mode="wait">
           <MentorshipStage
-            key={currentStageIndex}  // Ensure a unique key for the stage
+            key={currentStageIndex}
             title={currentStage.title}
             duration={currentStage.duration}
             objective={currentStage.objective}
             mentorshipFocus={currentStage.mentorshipFocus}
             feedbackLoops={currentStage.feedbackLoops}
             expectedOutcomes={currentStage.expectedOutcomes}
-            onClick={handleStageChange} // Trigger stage change on click
           />
         </AnimatePresence>
       </div>

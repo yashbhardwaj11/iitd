@@ -34,6 +34,7 @@ const EventInfo = () => {
         className="w-full relative lg:w-2/5 bg-cover rounded p-4 lg:p-6"
         style={{
           backgroundImage: "url('/bg-venue.png')",
+          height: "600px",
         }}
         initial={{ opacity: 0, x: -100 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -78,7 +79,7 @@ const EventInfo = () => {
             transition={{ duration: 0.5, delay: item.delay }}
           >
             {item.icon}
-            <div  > 
+            <div>
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-lg lg:text-base">{item.description}</p>
             </div>
@@ -98,7 +99,7 @@ const EventInfo = () => {
           {tabs.map((tab) => (
             <button
               key={tab.value}
-              className={`flex-1 py-2 text-base sm:text-lg lg:text-2xl font-semibold transition-colors duration-300 ${
+              className={`flex-1 py-2 mb-4 text-base sm:text-lg lg:text-2xl font-semibold transition-colors duration-300 ${
                 activeTab === tab.value ? "text-green-500" : "text-gray-400"
               }`}
               onClick={() => handleTabClick(tab.value)}
@@ -115,7 +116,9 @@ const EventInfo = () => {
             className={`absolute bottom-0 h-[2px] bg-green-500 transition-all duration-300`}
             style={{
               width: `${100 / tabs.length}%`,
-              transform: `translateX(${tabs.findIndex((tab) => tab.value === activeTab) * 100}%)`,
+              transform: `translateX(${
+                tabs.findIndex((tab) => tab.value === activeTab) * 100
+              }%)`,
             }}
           />
         </div>
@@ -134,30 +137,24 @@ const EventInfo = () => {
                 Designers, and Idea generators will come together to build
                 amazing applications, in an effort to create a better world.
               </p>
-              <p className="mb-5" >
-              Integrated throughout the day will be examples of disruptive ideas Pan India, many of which &rsquo;Silicon
- Valley comes to India&apos; hasn&apos;t witnes sed yet, as well as tips on taking the fear out of
- making
- the leap
-to
- entrepreneurship. Some leading mentors,
- technology
-experts/
-trainers and advisers will be on
-hand
-throughout the span of the event to answer y our questions on challenges you&apos;re facing. The
-areas we will cover: your business model,
-revenue model, social
-media and digital marketing
-strategy,
-selling to who and how,
-etc and
-there will be plenty of networking with other start-ups.
+              <p className="mb-5">
+                Integrated throughout the day will be examples of disruptive
+                ideas Pan India, many of which &rsquo;Silicon Valley comes to
+                India&apos; hasn&apos;t witnes sed yet, as well as tips on
+                taking the fear out of making the leap to entrepreneurship. Some
+                leading mentors, technology experts/ trainers and advisers will
+                be on hand throughout the span of the event to answer y our
+                questions on challenges you&apos;re facing. The areas we will
+                cover: your business model, revenue model, social media and
+                digital marketing strategy, selling to who and how, etc and
+                there will be plenty of networking with other start-ups.
               </p>
               <p>
-              Pre-hackathon workshop will provide relevant support to develop business ideas and skills. On the 1st day,
-the participants will receive guidance on the concept of the Ideation Model, MVP (minimum viable product)
-and Technical Guidance. The Hack-a-thon will be conducted on day 2 and 3.
+                Pre-hackathon workshop will provide relevant support to develop
+                business ideas and skills. On the 1st day, the participants will
+                receive guidance on the concept of the Ideation Model, MVP
+                (minimum viable product) and Technical Guidance. The Hack-a-thon
+                will be conducted on day 2 and 3.
               </p>
               {/* More content can be added here */}
             </motion.div>
@@ -170,13 +167,34 @@ and Technical Guidance. The Hack-a-thon will be conducted on day 2 and 3.
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <p className="mb-5">
-              Our goal is to bring together developers, designers, and entrepreneurs from diverse backgrounds, creating an ecosystem where meaningful connections can flourish. By uniting these creative minds, we aim to channel their skills toward solving real-world challenges and building innovative solutions. This hackathon provides an opportunity for participants to collaborate and apply their talents in a space designed to inspire creativity and productivity.
-
+                Our goal is to bring together developers, designers, and
+                entrepreneurs from diverse backgrounds, creating an ecosystem
+                where meaningful connections can flourish. By uniting these
+                creative minds, we aim to channel their skills toward solving
+                real-world challenges and building innovative solutions. This
+                hackathon provides an opportunity for participants to
+                collaborate and apply their talents in a space designed to
+                inspire creativity and productivity.
               </p>
-              <p className="mb-5">By establishing a makerspace, we are creating a dynamic environment where creators can engage with one another, brainstorm ideas, and work together to develop cutting-edge solutions. The event will encourage participants to think beyond the scope of traditional problem-solving and tap into their entrepreneurial potential. The solutions they create could become the foundation for new ventures or even future companies.
+              <p className="mb-5">
+                By establishing a makerspace, we are creating a dynamic
+                environment where creators can engage with one another,
+                brainstorm ideas, and work together to develop cutting-edge
+                solutions. The event will encourage participants to think beyond
+                the scope of traditional problem-solving and tap into their
+                entrepreneurial potential. The solutions they create could
+                become the foundation for new ventures or even future companies.
               </p>
 
-              <p>Set in an intellectually stimulating environment, the hackathon will spur innovation, push boundaries, and drive participants to explore their full potential. This unique platform will foster not only technical innovation but also a sense of community and shared learning. Through this event, participants will gain the chance to create, collaborate, and build projects that could shape the future of technology and entrepreneurship.</p>
+              <p>
+                Set in an intellectually stimulating environment, the hackathon
+                will spur innovation, push boundaries, and drive participants to
+                explore their full potential. This unique platform will foster
+                not only technical innovation but also a sense of community and
+                shared learning. Through this event, participants will gain the
+                chance to create, collaborate, and build projects that could
+                shape the future of technology and entrepreneurship.
+              </p>
               {/* More content can be added here */}
             </motion.div>
           )}
@@ -188,16 +206,36 @@ and Technical Guidance. The Hack-a-thon will be conducted on day 2 and 3.
               transition={{ duration: 0.5, delay: 0.7 }}
             >
               <p className="mb-5">
-              India, a land rich with cultural variety where many civilisations flourished, kingdoms rose and fell - leaving behind an array of splendid historic attractions, majestic temples and sculptures
-making India a unique destination. More than 50% of Indian population are under 25, filled with high
-aspirations, unique talents waiting to be explored. India is the &rsquo;Powerhouse of Technology&apos;.
+                India, a land rich with cultural variety where many
+                civilisations flourished, kingdoms rose and fell - leaving
+                behind an array of splendid historic attractions, majestic
+                temples and sculptures making India a unique destination. More
+                than 50% of Indian population are under 25, filled with high
+                aspirations, unique talents waiting to be explored. India is the
+                &rsquo;Powerhouse of Technology&apos;.
               </p>
-              <p className="mb-5" >Vision
-              - Our vision is to equip over 1 million Indian students with comprehensive knowledge in mobile technology and the implementation of cutting-edge concepts such as the Internet of Things (IoT), eCommerce, mCommerce, and social media skills. By empowering the youth with these essential digital skills, we aim to mold them into SMART professionals who are ready to take on the challenges of the modern digital economy.</p>
+              <p className="mb-5">
+                Vision - Our vision is to equip over 1 million Indian students
+                with comprehensive knowledge in mobile technology and the
+                implementation of cutting-edge concepts such as the Internet of
+                Things (IoT), eCommerce, mCommerce, and social media skills. By
+                empowering the youth with these essential digital skills, we aim
+                to mold them into SMART professionals who are ready to take on
+                the challenges of the modern digital economy.
+              </p>
               {/* More content can be added here */}
 
-              <p>Mission
-              - Our mission is to build the &rsquo;Digital India Hack-a-thon&apos;—a multifaceted platform that operates across web, mobile, and on-the-ground formats. This platform will serve as a space for young Indians to challenge their entrepreneurial abilities, put their creativity to the test, and maximize their potential in real-world scenarios. Through this initiative, we aim to inspire innovation and foster the development of the next generation of tech-savvy professionals who will drive India&apos;s digital transformation forward.</p>
+              <p>
+                Mission - Our mission is to build the &rsquo;Digital India
+                Hack-a-thon&apos;—a multifaceted platform that operates across
+                web, mobile, and on-the-ground formats. This platform will serve
+                as a space for young Indians to challenge their entrepreneurial
+                abilities, put their creativity to the test, and maximize their
+                potential in real-world scenarios. Through this initiative, we
+                aim to inspire innovation and foster the development of the next
+                generation of tech-savvy professionals who will drive
+                India&apos;s digital transformation forward.
+              </p>
             </motion.div>
           )}
         </motion.div>
