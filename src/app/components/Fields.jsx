@@ -1,10 +1,11 @@
 "use client";
-import Link from "next/link";
+
 import React from "react";
 import { SiTicktick } from "react-icons/si";
 import { HiDownload } from "react-icons/hi";
 import { motion, useInView } from "framer-motion";
 import "./shine.css"
+import Link from "next/link";
 
 const ChallengesTable = () => {
   const data = [

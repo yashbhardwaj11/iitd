@@ -1,7 +1,10 @@
 "use client";
 import Image from 'next/image';
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { HiDownload } from "react-icons/hi";
+import { motion, useInView } from "framer-motion";
+import "./shine.css"
+import Link from "next/link";
 
 const IdealSponsorComponent = () => {
   const ref = useRef(null);
@@ -9,6 +12,16 @@ const IdealSponsorComponent = () => {
 
   return (
     <div className="mx-auto px-4 py-8" ref={ref}>
+      <div className='flex mb-5 items-center justify-center'>
+          <Link
+            href="/AccountDetail"
+            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
+          >
+            PAY NOW
+        
+            <HiDownload className="ml-5 hidden group-hover:block transition-all duration-1000 group-hover:translate-x-2 transform" />
+          </Link>
+        </div>
       {/* Title with animation */}
       <motion.h1
         className="text-4xl lg:text-6xl lg:px-32 font-bold mb-12 text-center"
