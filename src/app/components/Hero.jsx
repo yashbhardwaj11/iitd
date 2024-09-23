@@ -73,7 +73,7 @@ function Hero() {
           variants={buttonVariants}
         >
           <Link
-            href="#"
+            href="https://bit.ly/4eipzG7"
             className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
           >
             REGISTER NOW
