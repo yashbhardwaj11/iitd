@@ -11,7 +11,6 @@ import IdealSponsorComponent from './components/IdealSponsor'
 import SupportUs from './components/Support'
 import Footer from './components/Footer'
 import Carousel from './components/Carousel'
-import AccountDetail from './components/AccountDetails'  
 export default function Home() {
   return (
    <div className="overflow-hidden space-y-16 " >
@@ -27,7 +26,7 @@ export default function Home() {
     <IdealSponsorComponent/>
     <SupportUs/>
     <Footer/>
-    <AccountDetail/>
+    {/* <AccountDetail/> */}
    </div>
   );
 }
