@@ -13,7 +13,7 @@ const IdealSponsorComponent = () => {
     <div className="mx-auto px-4 py-8" ref={ref}>
       <div className='flex mb-5 items-center justify-center'>
           <Link
-            href="/AccountDetail"
+            href="/AccountDetails"
             className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
           >
             PAY NOW
