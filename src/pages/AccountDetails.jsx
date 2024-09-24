@@ -1,4 +1,5 @@
 "use client";
+import '../app/globals.css'
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
