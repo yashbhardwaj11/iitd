@@ -37,7 +37,7 @@ export default function SupportUs() {
           hours, and that takes loads of caffeine and snacks. If you&apos;re willing to provide snacks for the event (especially late
           night), we&apos;ll present them in a way that emphasizes your sponsorship.
           <br />
-          <strong>(e.g., "Midnight Pizza presented by [you]!")</strong>
+          <strong>(e.g., &quot;Midnight Pizza presented by [you]!&quot;)</strong>
         </motion.p>
       </div>
     </section>
