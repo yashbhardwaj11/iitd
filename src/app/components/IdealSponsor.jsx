@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
 import React, { useRef } from 'react';
-import { HiDownload } from "react-icons/hi";
 import { motion, useInView } from "framer-motion";
 import "./shine.css"
 import Link from "next/link";

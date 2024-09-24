@@ -33,9 +33,9 @@ export default function SupportUs() {
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          If you can't contribute financially, no problem! We'd still love to have your support. Hackers will be at it for 48
-          hours, and that takes loads of caffeine and snacks. If you're willing to provide snacks for the event (especially late
-          night), we'll present them in a way that emphasizes your sponsorship.
+          If you can&apos;t contribute financially, no problem! We&apos;d still love to have your support. Hackers will be at it for 48
+          hours, and that takes loads of caffeine and snacks. If you&apos;re willing to provide snacks for the event (especially late
+          night), we&apos;ll present them in a way that emphasizes your sponsorship.
           <br />
           <strong>(e.g., "Midnight Pizza presented by [you]!")</strong>
         </motion.p>
