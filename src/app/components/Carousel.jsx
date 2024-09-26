@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -20,8 +20,6 @@ const images = [
 ];
 
 const Carousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  setActiveIndex = null;
   // React Slick settings for smooth, infinite scrolling
   const settings = {
     infinite: true,
@@ -66,18 +64,17 @@ const Carousel = () => {
             key={index}
             src={image}
             index={index}
-            activeIndex={activeIndex}
           />
         ))}
       </Slider>
-      <div className=" w-[25%]  text-center mx-auto mt-10" >
+      <div className=" w-[25%] text-center mx-auto mt-10">
         <Link
-              href="/AccountDetails"
-              className="shine-effect bg-[#007F40] hover:bg-green-700 justify-center group flex items-center  text-white font-bold py-3  rounded-sm text-lg lg:text-xl relative overflow-hidden"
-            >
-              PAST HACKATHON REPORT
-            </Link>
-        </div>
+          href="/AccountDetails"
+          className="shine-effect bg-[#007F40] hover:bg-green-700 justify-center group flex items-center text-white font-bold py-3 rounded-sm text-lg lg:text-xl relative overflow-hidden"
+        >
+          PAST HACKATHON REPORT
+        </Link>
+      </div>
     </div>
   );
 };
