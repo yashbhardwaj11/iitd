@@ -21,7 +21,7 @@ const images = [
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  setActiveIndex = null;
   // React Slick settings for smooth, infinite scrolling
   const settings = {
     infinite: true,
