@@ -21,6 +21,15 @@ const images = [
 
 const Carousel = () => {
   // React Slick settings for smooth, infinite scrolling
+  const downloadFile = () => {
+    const fileUrl = '/HackathonApril-Report.pdf'; // Adjust the file name and extension accordingly
+    const anchor = document.createElement('a');
+    anchor.href = fileUrl;
+    anchor.download = 'HackathonApril-Report.pdf'; // This sets the name of the downloaded file
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
   const settings = {
     infinite: true,
     speed: 2000,
@@ -67,14 +76,15 @@ const Carousel = () => {
           />
         ))}
       </Slider>
-      <div className=" w-[25%] text-center mx-auto mt-10">
-        <Link
-          href="/AccountDetails"
-          className="shine-effect bg-[#007F40] hover:bg-green-700 justify-center group flex items-center text-white font-bold py-3 rounded-sm text-lg lg:text-xl relative overflow-hidden"
-        >
+      <div className="w-[25%] text-center mx-auto mt-10">
+      <Link href="#" onClick={downloadFile} passHref>
+        <span className="shine-effect bg-[#007F40] hover:bg-green-700 justify-center group flex items-center text-white font-bold py-3 rounded-sm text-lg lg:text-xl relative overflow-hidden">
           PAST HACKATHON REPORT
-        </Link>
-      </div>
+        </span>
+      </Link>
+    </div>
+
+
     </div>
   );
 };

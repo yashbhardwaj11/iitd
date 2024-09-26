@@ -12,6 +12,7 @@ import PanIndiaMap from './components/PanLocation'
 import Footer from './components/Footer'
 import Carousel from './components/Carousel'
 import Flow from './components/Flow'
+import Team from './components/Team'
 export default function Home() {
   return (
    <div className="overflow-hidden space-y-16 " >
@@ -27,6 +28,7 @@ export default function Home() {
     <SponsorsAndBenefits/>
     <SponsorComponent/>
     <IdealSponsorComponent/>
+    <Team/>
     <Footer/>
     {/* <AccountDetail/> */}
    </div>

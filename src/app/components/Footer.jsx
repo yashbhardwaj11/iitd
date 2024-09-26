@@ -46,6 +46,7 @@ const Footer = () => {
               <Link href="#Sponsor" className="hidden md:inline">
                 Sponsors
               </Link>
+              
               <Link href="#Footer" className="hidden md:inline">
                 Contact Us
               </Link>
@@ -78,6 +79,15 @@ const Footer = () => {
               >
                 <button className="border border-gray-300 rounded-full py-1 px-3 text-base">
                   Instagram
+                </button>
+              </a>
+              <a
+                href="https://X.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="border border-gray-300 rounded-full py-1 px-3 text-base">
+                  X
                 </button>
               </a>
               <a
