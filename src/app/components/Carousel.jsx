@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Link from "next/link";
 
 // Dummy image URLs
 const images = [
@@ -21,17 +22,17 @@ const images = [
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // React Slick settings
+  // React Slick settings for smooth, infinite scrolling
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
-    beforeChange: (_current, next) => setActiveIndex(next),
-    centerMode: true,
-    centerPadding: "0", // No padding for centerMode
+    autoplaySpeed: 0,
+    cssEase: "linear", // Ensure linear scrolling
+    centerMode: false, // Disable center mode
+    pauseOnHover: false, // Avoid pausing on hover for smooth reel effect
     responsive: [
       {
         breakpoint: 1024, // For tablets
@@ -58,7 +59,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden"> 
       <Slider {...settings}>
         {images.map((image, index) => (
           <ImageCard
@@ -69,15 +70,23 @@ const Carousel = () => {
           />
         ))}
       </Slider>
+      <div className=" w-[25%]  text-center mx-auto mt-10" >
+        <Link
+              href="/AccountDetails"
+              className="shine-effect bg-[#007F40] hover:bg-green-700 justify-center group flex items-center  text-white font-bold py-3  rounded-sm text-lg lg:text-xl relative overflow-hidden"
+            >
+              PAST HACKATHON REPORT
+            </Link>
+        </div>
     </div>
   );
 };
 
-// ImageCard component
+// ImageCard component with added spacing
 const ImageCard = ({ src, index }) => {
   return (
     <motion.div
-      className="relative flex items-center justify-center w-full h-80" // Set width and height
+      className="relative flex items-center justify-center w-full h-80 px-4" // Added px-4 for spacing between slides
       transition={{ duration: 0.5 }}
     >
       <Image

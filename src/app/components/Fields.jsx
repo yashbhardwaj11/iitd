@@ -64,7 +64,7 @@ const ChallengesTable = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
       id="Fields"
-      className="mt-10 lg:mt-14 overflow-scroll lg:mx-32"
+      className="mt-10 lg:mt-14 overflow-auto lg:mx-32"
     >
       <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-8 text-center">
         HACKATHON PROBLEM STATEMENTS
@@ -125,6 +125,12 @@ const ChallengesTable = () => {
           </Link>
         </div>
       </div>
+
+      <img 
+        src="/Frame.png"
+        alt="image" 
+        className="w-full h-full "
+      />
     </motion.div>
   );
 };

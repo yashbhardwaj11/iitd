@@ -111,17 +111,15 @@ const Footer = () => {
         <div>
           <p className="text-center lg:text-right text-green-600">
             <a
-              href="https://www.linkedin.com/in/ishita-garg-0b467620a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Designed by Ishita Garg
+              Nebula Deftech Foundation.
             </a>
           </p>
 
-          <p className="text-center lg:text-right text-green-600">
-            Created by Saksham Gupta
-          </p>
+          
         </div>
       </div>
     </footer>

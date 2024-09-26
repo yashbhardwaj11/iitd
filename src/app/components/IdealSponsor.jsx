@@ -3,24 +3,13 @@ import Image from 'next/image';
 import React, { useRef } from 'react';
 import { motion, useInView } from "framer-motion";
 import "./shine.css"
-import Link from "next/link";
 
 const IdealSponsorComponent = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
   return (
-    <div className="mx-auto px-4 py-8" ref={ref}>
-      <div className='flex mb-5 items-center justify-center'>
-          <Link
-            href="/AccountDetails"
-            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
-          >
-            PAY NOW
-        
-           
-          </Link>
-        </div>
+    <div id='idealsponsor' className="mx-auto px-4 py-8" ref={ref}  >
       {/* Title with animation */}
       <motion.h1
         className="text-4xl lg:text-6xl lg:px-32 font-bold mb-12 text-center"
@@ -32,7 +21,9 @@ const IdealSponsorComponent = () => {
       </motion.h1>
 
       {/* Card Section */}
-      <div className="grid grid-cols-1 bg-[#007F40] md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 bg-[#007F40] md:grid-cols-4 gap-6" style={{
+      backgroundImage: "url('/bgsponsor.png')", // Adjust to your actual image path
+    }} >
         {/* Card Template */}
         {[
           {
@@ -58,7 +49,7 @@ const IdealSponsorComponent = () => {
         ].map((card, index) => (
           <motion.div
             key={index}
-            className="bg-[#007F40] py-10 hover:bg-[#5D7BA1] text-white px-6 flex flex-col items-center text-center hover:scale-105 md:hover:scale-110 transition-transform duration-700"
+            className=" py-10 hover:bg-[#5D7BA1] text-white px-6 flex flex-col items-center text-center hover:scale-105 md:hover:scale-y-110 transition-transform duration-700"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

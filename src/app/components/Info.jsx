@@ -1,11 +1,13 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaRegClock, FaMapMarkerAlt, FaTrophy } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
 import { motion, useInView } from "framer-motion";
 
 const EventInfo = () => {
   const [activeTab, setActiveTab] = useState("about");
+  const [contentHeight, setContentHeight] = useState(0);
+  const contentRef = useRef(null);
 
   const tabs = [
     { name: "ABOUT US", value: "about" },
@@ -19,6 +21,12 @@ const EventInfo = () => {
 
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [activeTab]);
 
   return (
     <motion.div
@@ -73,7 +81,7 @@ const EventInfo = () => {
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="text-white flex items-center  space-y-8 space-x-5"
+            className="text-white flex items-center space-y-8 space-x-5"
             initial={{ opacity: 0, x: -100 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: item.delay }}
@@ -93,6 +101,7 @@ const EventInfo = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.3 }}
+        style={{ minHeight: contentHeight }} // Set min-height based on content
       >
         {/* Tab Buttons */}
         <div className="relative flex justify-between border-b border-gray-300 space-x-2 sm:space-x-4">
@@ -124,7 +133,10 @@ const EventInfo = () => {
         </div>
 
         {/* Tab Content */}
-        <motion.div className="mt-6 text-lg sm:text-lg md:mx-10 md:text-base lg:text-xl">
+        <motion.div
+          className="mt-6 text-lg sm:text-lg md:mx-10 md:text-base lg:text-xl"
+          ref={contentRef} // Attach ref for dynamic height calculation
+        >
           {activeTab === "about" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,10 +152,10 @@ const EventInfo = () => {
               <p className="mb-5">
                 Integrated throughout the day will be examples of disruptive
                 ideas Pan India, many of which &rsquo;Silicon Valley comes to
-                India&apos; hasn&apos;t witnes sed yet, as well as tips on
+                India&apos; hasn&apos;t witnessed yet, as well as tips on
                 taking the fear out of making the leap to entrepreneurship. Some
                 leading mentors, technology experts/ trainers and advisers will
-                be on hand throughout the span of the event to answer y our
+                be on hand throughout the span of the event to answer your
                 questions on challenges you&apos;re facing. The areas we will
                 cover: your business model, revenue model, social media and
                 digital marketing strategy, selling to who and how, etc and
@@ -195,8 +207,8 @@ const EventInfo = () => {
                 chance to create, collaborate, and build projects that could
                 shape the future of technology and entrepreneurship.
               </p>
-              {/* More content can be added here */}
-            </motion.div>
+
+              </motion.div>
           )}
 
           {activeTab === "vision" && (
@@ -243,5 +255,6 @@ const EventInfo = () => {
     </motion.div>
   );
 };
+
 
 export default EventInfo;

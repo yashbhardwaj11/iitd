@@ -40,7 +40,6 @@ const mentorshipStages = [
       "A polished presentation that showcases project impact.",
     image: "/image3.png",
   },
-  // Add more stages as needed
 ];
 
 const transitionVariant = {
@@ -96,36 +95,31 @@ const MentorshipStagesList = () => {
   const isScrolling = useRef(false);
 
   const handleScroll = (e) => {
-    if (isScrolling.current) return; // Prevent multiple stage changes during a single scroll
+    if (isScrolling.current) return;
     const deltaY = e.deltaY;
 
-    // Check scroll direction
     if (deltaY > 0) {
-      // Scroll down
       setCurrentStageIndex((prevIndex) =>
         prevIndex === mentorshipStages.length - 1 ? 0 : prevIndex + 1
       );
     } else if (deltaY < 0) {
-      // Scroll up
       setCurrentStageIndex((prevIndex) =>
         prevIndex === 0 ? mentorshipStages.length - 1 : prevIndex - 1
       );
     }
 
-    isScrolling.current = true; // Set scrolling to true
+    isScrolling.current = true;
 
     setTimeout(() => {
-      isScrolling.current = false; // Reset scrolling status after a short delay
-    }, 500); // Adjust the delay for smoother transitions
+      isScrolling.current = false;
+    }, 500);
   };
 
   useEffect(() => {
-    // Add event listener for mouse wheel scroll
     const container = document.getElementById("mentorship-container");
     container.addEventListener("wheel", handleScroll);
 
     return () => {
-      // Clean up event listener on component unmount
       container.removeEventListener("wheel", handleScroll);
     };
   }, []);
@@ -135,8 +129,8 @@ const MentorshipStagesList = () => {
   return (
     <div
       id="mentorship-container"
-      className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 overflow-y-auto" // Make the component scrollable
-      style={{ height: '80vh' }} // Set a fixed height for the component
+      className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8"
+      style={{ minHeight: '80vh',  }} // Ensure content is scrollable and doesn't overlap
     >
       {/* Left Section: Image */}
       <h1 className="text-4xl flex md:hidden font-bold mb-4 text-center">
@@ -150,19 +144,19 @@ const MentorshipStagesList = () => {
       <div className="w-full lg:w-1/3">
         <AnimatePresence mode="wait">
           <motion.img
-            key={currentStageIndex}  // Use the stage index as the key to trigger re-render
-            src={currentStage.image} // Use current stage image
+            key={currentStageIndex}
+            src={currentStage.image}
             alt="Hackathon Stage"
-            className="w-full h-[60vw] md:h-[35vw] rounded-lg shadow-lg"
+            className="w-full h-[60vw] md:h-[35vw] lg:h-auto rounded-lg shadow-lg"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.7 }} // Smooth transition for 0.7 seconds
+            transition={{ duration: 0.7 }}
           />
         </AnimatePresence>
       </div>
 
-      {/* Static Content: Heading and Intro Paragraph (No Animation) */}
+      {/* Static Content: Heading and Intro Paragraph */}
       <div className="w-full lg:w-1/2">
         <h1 className="text-xl hidden md:flex lg:text-5xl font-bold mb-4 text-center">
           HACKATHON MENTORSHIP AND COHORT STAGES

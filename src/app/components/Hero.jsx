@@ -38,7 +38,7 @@ function Hero() {
   return (
     <motion.section
       id="Hero"
-      className="relative bg-cover w-screen bg-center height: 250vh; md:h-[100vh] flex"
+      className="relative bg-cover w-screen bg-center h-[100vh] flex"
       style={{
         backgroundImage: "url('/herobackground.png')", // Adjust to your actual image path
       }}
@@ -49,25 +49,47 @@ function Hero() {
     >
       <motion.div className="absolute inset-0 bg-black bg-opacity-70"></motion.div>
 
-      <motion.div className="z-10 mx-auto mt-12 px-8 ">
+      <motion.div className="z-10 mx-auto mt-12 px-4 sm:px-8 md:px-12">
+      <motion.div className="flex flex-col md:flex-row justify-between items-center">
+        {/* SVG Logo */}
         <motion.object
           data="/logo.svg" // Adjust this to the actual path
           type="image/svg+xml"
-          className="w-32 h-32 md:w-40 md:h-40 mb-4 md:mb-16"
+          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 mb-6 md:mb-16"
           variants={fadeInUpVariants}
         />
+
+        {/* Donate Button */}
+        <motion.div
+          className="flex items-center justify-center mt-6 md:mt-0"
+          variants={buttonVariants}
+        >
+          <Link
+            href="/AccountDetails"
+            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center px-8 sm:px-12 md:px-14 lg:px-16 text-white font-bold py-3 sm:py-3.5 md:py-4 lg:py-5 rounded-sm text-lg sm:text-xl md:text-2xl relative overflow-hidden"
+          >
+            DONATE NOW
+          </Link>
+        </motion.div>
+      </motion.div>
+        
+        <motion.h1
+          className="text-white text-center font-extrabold text-4xl md:text-5xl lg:text-7xl"
+          variants={fadeInUpVariants}
+        >
+          DIGITAL INDIA 
+        </motion.h1>
         <motion.h1
           className="text-white text-center font-extrabold text-4xl md:text-5xl lg:text-7xl md:mb-10"
           variants={fadeInUpVariants}
         >
-          DIGITAL INDIA HACKATHON &apos;24
+          HACK-A-THON 
         </motion.h1>
         <motion.p
           className="text-white mb-5 md:mb-14 text-lg md:text-2xl text-center max-w-5xl mx-auto"
           variants={fadeInUpVariants}
         >
-          We are hosting 36hrs (two days-one night) Web- Mobile- Digital Media DAPP #Hackathon at IIT-Delhi designed for Blockchain (Web3)/ AI/ ML, SaaS entrepreneurs and Legal domain professionals focused in Defence, DeepTech and Women-led enterprises.
-        </motion.p>
+We are hosting 36hrs (two days-one night) Web- Mobile- Digital Media DAPP #Hackathon at IIT-Delhi designed for Blockchain (Web3)/ AI/ ML, SaaS entrepreneurs and Legal domain professionals focused in Defence, DeepTech and Women-led enterprises.        </motion.p>
         <motion.div
           className="flex mb-5 items-center justify-center"
           variants={buttonVariants}
@@ -84,7 +106,7 @@ function Hero() {
           className="flex items-center justify-center"
           variants={fadeInUpVariants}
         >
-          <Link href="#" className="text-xl font-semibold underline text-white">
+          <Link href="#idealsponsor" className="text-xl font-semibold underline text-white">
             INTERESTED IN SPONSORING?
           </Link>
         </motion.div>
