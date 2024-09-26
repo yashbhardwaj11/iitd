@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Define the dynamic content array
@@ -17,36 +17,56 @@ const mentorshipStages = [
     image: "/image.png",
   },
   {
-    title: "PROTOTYPING STAGE",
-    duration: "72 Hours",
-    objective: "Create a working prototype based on ideas.",
+    title: "Go-to-Market Strategy Stage",
+    duration: "48 Hours",
+    objective: "Develop a comprehensive go-to-market strategy.",
     mentorshipFocus:
-      "Hands-on support with technical tools and development.",
-    feedbackLoops:
-      "Regular check-ins with mentors to ensure smooth progress.",
-    expectedOutcomes:
-      "A functional prototype aligned with the project goals.",
+      "Market Analysis: Mentors will assist in identifying target markets and conducting competitive analysis. Strategy Workshops: Sessions will be held to develop customer acquisition, retention strategies, and define the value proposition.",
+    feedbackLoops: "",
+    expectedOutcomes: "A comprehensive go-to-market strategy ready for implementation.",
     image: "/image2.png",
   },
   {
-    title: "PRESENTATION STAGE",
-    duration: "24 Hours",
-    objective: "Prepare final presentations and demos.",
+    title: "Inculcation of Government Schemes Stage",
+    duration: "48 Hours",
+    objective: "Integrate relevant government initiatives into the solution.",
     mentorshipFocus:
-      "Guidance on structuring presentations and pitching.",
-    feedbackLoops:
-      "Final feedback on the overall project presentation.",
-    expectedOutcomes:
-      "A polished presentation that showcases project impact.",
+      "Expert Sessions: Mentors with expertise in government schemes will provide insights on applicable programs. Implementation Guidance: Assistance in aligning the solution with government objectives and maximizing potential benefits.",
+    feedbackLoops: "",
+    expectedOutcomes: "A well-defined business model incorporating relevant government schemes.",
     image: "/image3.png",
   },
+  {
+    title: "TECHNICAL ROUND STAGE",
+    duration: "48 Hours",
+    objective: "Assess the technical viability of the solution.",
+    mentorshipFocus:
+      "Technical Reviews: Mentors will evaluate prototypes or MVPs, offering technical insights and suggestions for improvement. Problem-Solving Workshops: Sessions focused on addressing technical challenges and refining the solution's architecture.",
+    feedbackLoops: "",
+    expectedOutcomes: "A technically sound solution ready for demonstration.",
+    image: "/image4.png",
+  },
+  {
+    title: "PITCH STAGE",
+    duration: "48 Hours",
+    objective: "Present the solution to judges and stakeholders.",
+    mentorshipFocus:
+      "Pitch Preparation: Mentors will help participants craft compelling narratives, focusing on clarity and engagement. Mock Presentations: Practice sessions will allow participants to refine their delivery and receive feedback.",
+    feedbackLoops: "",
+    expectedOutcomes: "A polished pitch that effectively communicates the solution and its market potential.",
+    image: "/image5.png",
+  },
+  {
+    title: "MENTORSHIP FORMAT",
+    duration: "Throughout the Hackathon",
+    objective: "Provide continuous mentorship and support.",
+    mentorshipFocus:
+      "One-on-One Sessions: Participants will have scheduled meetings with mentors for personalized guidance. Group Workshops: Collaborative sessions focused on specific topics, encouraging peer learning and support. Continuous Support: Mentors will be available for questions and guidance throughout the hackathon.",
+    feedbackLoops: "",
+    expectedOutcomes: "Enhanced participant engagement and support.",
+    image: "/image6.png",
+  },
 ];
-
-const transitionVariant = {
-  hidden: { opacity: 0, y: 50 },  // Start below the viewport
-  visible: { opacity: 1, y: 0 },  // Rise into view
-  exit: { opacity: 0, y: -50 },   // Scroll upwards and disappear
-};
 
 const MentorshipStage = ({
   title,
@@ -57,17 +77,9 @@ const MentorshipStage = ({
   expectedOutcomes,
 }) => {
   return (
-    <motion.div
-      className="w-full lg:w-1/2"
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      variants={transitionVariant}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="w-full lg:w-1/2">
       <div className="w-[80vw] md:w-[50vw]">
         <h2 className="text-lg lg:text-3xl font-bold mb-4">✶ {title}</h2>
-
         <div className="space-y-2 border-l-2 border-green-400 pl-4">
           <p className="text-lg lg:text-xl">
             <span className="font-bold">Duration:</span> {duration}
@@ -86,33 +98,41 @@ const MentorshipStage = ({
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const MentorshipStagesList = () => {
   const [currentStageIndex, setCurrentStageIndex] = useState(0);
-  const isScrolling = useRef(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const handleScroll = (e) => {
-    if (isScrolling.current) return;
     const deltaY = e.deltaY;
 
-    if (deltaY > 0) {
-      setCurrentStageIndex((prevIndex) =>
-        prevIndex === mentorshipStages.length - 1 ? 0 : prevIndex + 1
-      );
-    } else if (deltaY < 0) {
-      setCurrentStageIndex((prevIndex) =>
-        prevIndex === 0 ? mentorshipStages.length - 1 : prevIndex - 1
-      );
+    // If the index is >= 5, stop custom scroll behavior, let the page scroll
+    if (currentStageIndex >= 5) {
+      return; // Don't block default page scrolling
     }
 
-    isScrolling.current = true;
+    // Prevent rapid scrolling between stages
+    if (isScrolling) return;
 
+    e.preventDefault(); // Prevent page scrolling when in the first 5 stages
+
+    // Smooth scroll between stages
+    setIsScrolling(true);
     setTimeout(() => {
-      isScrolling.current = false;
-    }, 500);
+      if (deltaY > 0) {
+        setCurrentStageIndex((prevIndex) =>
+          prevIndex === mentorshipStages.length - 1 ? prevIndex : prevIndex + 1
+        );
+      } else if (deltaY < 0) {
+        setCurrentStageIndex((prevIndex) =>
+          prevIndex === 0 ? prevIndex : prevIndex - 1
+        );
+      }
+      setIsScrolling(false); // Reset scroll blocking after delay
+    }, 800); // Delay between scrolls
   };
 
   useEffect(() => {
@@ -122,7 +142,7 @@ const MentorshipStagesList = () => {
     return () => {
       container.removeEventListener("wheel", handleScroll);
     };
-  }, []);
+  }, [currentStageIndex, isScrolling]);
 
   const currentStage = mentorshipStages[currentStageIndex];
 
@@ -130,7 +150,7 @@ const MentorshipStagesList = () => {
     <div
       id="mentorship-container"
       className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8"
-      style={{ minHeight: '80vh',  }} // Ensure content is scrollable and doesn't overlap
+      style={{ minHeight: "80vh" }}
     >
       {/* Left Section: Image */}
       <h1 className="text-4xl flex md:hidden font-bold mb-4 text-center">
@@ -140,20 +160,13 @@ const MentorshipStagesList = () => {
         The mentorship program is designed to support participants throughout the hackathon, providing guidance and expertise at each stage of development. Participants will progress through five key stages, each structured to foster collaboration and innovation.
       </p>
 
-      {/* Smooth image transition with AnimatePresence */}
+      {/* Image display without animation */}
       <div className="w-full lg:w-1/3">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentStageIndex}
-            src={currentStage.image}
-            alt="Hackathon Stage"
-            className="w-full h-[60vw] md:h-[35vw] lg:h-auto rounded-lg shadow-lg"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.7 }}
-          />
-        </AnimatePresence>
+        <img
+          src={currentStage.image}
+          alt="Hackathon Stage"
+          className="w-full h-[60vw] md:h-[35vw] lg:h-auto rounded-lg shadow-lg"
+        />
       </div>
 
       {/* Static Content: Heading and Intro Paragraph */}
@@ -165,18 +178,16 @@ const MentorshipStagesList = () => {
           The mentorship program is designed to support participants throughout the hackathon, providing guidance and expertise at each stage of development. Participants will progress through five key stages, each structured to foster collaboration and innovation.
         </p>
 
-        {/* Animated Stage Content */}
-        <AnimatePresence mode="wait">
-          <MentorshipStage
-            key={currentStageIndex}
-            title={currentStage.title}
-            duration={currentStage.duration}
-            objective={currentStage.objective}
-            mentorshipFocus={currentStage.mentorshipFocus}
-            feedbackLoops={currentStage.feedbackLoops}
-            expectedOutcomes={currentStage.expectedOutcomes}
-          />
-        </AnimatePresence>
+        {/* Display the current stage content */}
+        <MentorshipStage
+          key={currentStageIndex}
+          title={currentStage.title}
+          duration={currentStage.duration}
+          objective={currentStage.objective}
+          mentorshipFocus={currentStage.mentorshipFocus}
+          feedbackLoops={currentStage.feedbackLoops}
+          expectedOutcomes={currentStage.expectedOutcomes}
+        />
       </div>
     </div>
   );
