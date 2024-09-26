@@ -66,7 +66,7 @@ function Hero() {
         >
           <Link
             href="/AccountDetails"
-            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center px-8 sm:px-12 md:px-14 lg:px-16 text-white font-bold py-3 sm:py-3.5 md:py-4 lg:py-5 rounded-sm text-lg sm:text-xl md:text-2xl relative overflow-hidden"
+            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
           >
             DONATE NOW
           </Link>

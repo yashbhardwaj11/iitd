@@ -66,9 +66,9 @@ const Footer = () => {
           {/* Right Section - Contact Info & Social Media */}
           <div className="text-center md:flex justify-between lg:text-right">
             <div className="md:text-left">
-              <div className="text-lg font-bold text-gray-700">CONTACT US</div>
-              <div className="text-lg text-gray-500">+1 891 989-11-91</div>
-              <div className="text-lg text-gray-500">info@logoipsum.com</div>
+              <div className="  text-gray-400">CONTACT US</div>
+              <div className="text-lg text-gray-900">+91 9638413900</div>
+              <div className="text-lg text-gray-900">nebuladeftech@gmail.com</div>
             </div>
             {/* Social Media Links */}
             <div className="flex justify-center lg:justify-end space-x-4 mt-4">
@@ -86,7 +86,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="border border-gray-300 rounded-full py-1 px-3 text-base">
+                <button className="border border-gray-300 rounded-full py-1 px-6 text-base">
                   X
                 </button>
               </a>
