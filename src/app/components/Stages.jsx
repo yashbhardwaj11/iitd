@@ -74,7 +74,6 @@ const mentorshipStages = [
 ];
 
 const MentorshipStage = ({
-  index,
   title,
   duration,
   objective,
