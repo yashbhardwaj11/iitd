@@ -18,14 +18,14 @@ export default function Home() {
    <div className="overflow-hidden space-y-16 " >
     <Hero/>
     <EventInfo/>
-    <PanIndiaMap/>
+    {/* <PanIndiaMap/> */}
     <ChallengesTable/>
     <MentorshipStagesList/>
     <Flow/>
     <Proceedings/>
     <Carousel/>
     <WhySponsor/>
-    <SponsorsAndBenefits/>
+    {/* <SponsorsAndBenefits/> */}
     <SponsorComponent/>
     <IdealSponsorComponent/>
     <Team/>

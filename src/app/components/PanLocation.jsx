@@ -7,8 +7,8 @@ const PanIndiaMap = () => {
       <div className="flex flex-col lg:w-1/2 h-full">
         {/* Top Text */}
         <div className="bg-[#007F40] text-white flex justify-center items-center py-6 md:pt-12">
-          <h1 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold leading-tight">
-            LOCATION - <br /> PAN INDIA
+          <h1 className="text-center text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
+            BUILDING FOR - <br /> BHARAT 2.0
           </h1>
         </div>
 
@@ -27,7 +27,7 @@ const PanIndiaMap = () => {
         <Image
           src="/indiabg.png" // Replace with actual image path
           alt="Pan India locations map"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
         />
       </div>
     </div>

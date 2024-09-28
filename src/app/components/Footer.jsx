@@ -82,7 +82,7 @@ const Footer = () => {
                 </button>
               </a>
               <a
-                href="https://X.com"
+                href="https://x.com/DigitalIndHack"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -100,7 +100,7 @@ const Footer = () => {
                 </button>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://m.facebook.com/digitalindiahack/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
