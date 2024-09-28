@@ -7,9 +7,9 @@ function Flow() {
         PROCESS FLOW AND TIMELINE
       </h2>
       <img
-        src='/Group 3094.png'
+        src='/roadmap.png'
         alt='Process Flow and Timeline'
-        className='w-full max-w-full h-auto object-contain'
+        className='w-full max-h-screen object-contain'
       />
     </div>
   );

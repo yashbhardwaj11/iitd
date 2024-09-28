@@ -76,12 +76,15 @@ const Carousel = () => {
           />
         ))}
       </Slider>
-      <div className="w-[25%] text-center mx-auto mt-10">
-      <Link href="#" onClick={downloadFile} passHref>
-        <span className="shine-effect bg-[#007F40] hover:bg-green-700 justify-center group flex items-center text-white font-bold py-3 rounded-sm text-lg lg:text-xl relative overflow-hidden">
-          PAST HACKATHON REPORT
-        </span>
-      </Link>
+      <div className=" w-[90%]  md:w-[25%] text-center mx-auto  mt-10">
+      
+      <Link
+            href="#" onClick={downloadFile} passHref
+            className="shine-effect bg-[#007F40] hover:bg-green-700 group flex items-center justify-center text-center hover:px-14 text-white font-bold py-3 px-8 rounded-sm text-xl transition-all duration-300 relative overflow-hidden"
+          >
+   PAST HACKATHON REPORT
+
+          </Link>
     </div>
 
 

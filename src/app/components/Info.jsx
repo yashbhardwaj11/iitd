@@ -39,65 +39,65 @@ const EventInfo = () => {
     >
       {/* Left section: Event Information */}
       <motion.div
-        className="w-full relative lg:w-2/5 bg-cover rounded p-4 lg:p-6"
-        style={{
-          backgroundImage: "url('/bg-venue.png')",
-          height: "600px",
-        }}
-        initial={{ opacity: 0, x: -100 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
-          EVENT INFORMATION
-        </h2>
+      className="w-full h-full lg:w-2/6 text-white rounded p-6"
+      style={{
+        backgroundImage: "url('/bg-venue.png')", // Adjust as needed
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "650px", // You can adjust this as needed
+      }}
+      initial={{ opacity: 0, x: -100 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.3 }}
+    >
+      <h2 className="text-3xl font-bold mb-10">EVENT INFORMATION</h2>
 
-        {[
-          {
-            icon: <FaMapMarkerAlt className="w-12 h-12" />,
-            title: "Location",
-            description:
-              "IIT Delhi Main Rd, IIT Campus, Hauz Khas, New Delhi, Delhi 110016",
-            delay: 0.5,
-          },
-          {
-            icon: <FaRegClock className="w-12 h-12" />,
-            title: "Time Duration",
-            description: "36 Hours",
-            delay: 0.6,
-          },
-          {
-            icon: <RiTeamFill className="w-12 h-12" />,
-            title: "Team Size",
-            description: "3-5 Members",
-            delay: 0.7,
-          },
-          {
-            icon: <FaTrophy className="w-12 h-12" />,
-            title: "Prize",
-            description: "Cash Prize and Certificates",
-            delay: 0.8,
-          },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            className="text-white flex items-center space-y-8 space-x-5"
-            initial={{ opacity: 0, x: -100 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: item.delay }}
-          >
-            {item.icon}
-            <div>
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-lg lg:text-base">{item.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+      {[
+        {
+          icon: <FaMapMarkerAlt className="w-10 h-10" />,
+          title: "Location",
+          description: "IIT Delhi Main Rd, IIT Campus, Hauz Khas, New Delhi, Delhi 110016",
+          delay: 0.5,
+        },
+        {
+          icon: <FaRegClock className="w-10 h-10" />,
+          title: "Time Duration",
+          description: "36 Hours",
+          delay: 0.6,
+        },
+        {
+          icon: <RiTeamFill className="w-10 h-10" />,
+          title: "Team Size",
+          description: "5-7 Members",
+          delay: 0.7,
+        },
+        {
+          icon: <FaTrophy className="w-10 h-10" />,
+          title: "Prize",
+          description: "Cash Prize and Certificates",
+          delay: 0.8,
+        },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          className="flex items-center mb-10"
+          initial={{ opacity: 0, x: -100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.5, delay: item.delay }}
+        >
+          {item.icon}
+          <div className="ml-4">
+            <h3 className="text-base font-semibold">{item.title}</h3>
+            <p className="text-lg">{item.description}</p>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
 
       {/* Right section: Tabs and content */}
       <motion.div
-        className="w-full lg:w-2/3 bg-white text-black rounded-lg p-4 lg:p-6 relative"
+        className="w-full lg:w-3/4 bg-white text-black rounded-lg p-4 lg:p-6 relative"
         initial={{ opacity: 0, x: 100 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.3 }}

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 // Define the dynamic content array
 const mentorshipStages = [
   {
+    index: 1,
     title: "IDEATION STAGE",
     duration: "48 Hours",
     objective: "Brainstorm and develop innovative ideas.",
@@ -16,6 +17,7 @@ const mentorshipStages = [
     image: "/image.png",
   },
   {
+    index: 2,
     title: "Go-to-Market Strategy Stage",
     duration: "48 Hours",
     objective: "Develop a comprehensive go-to-market strategy.",
@@ -26,6 +28,7 @@ const mentorshipStages = [
     image: "/image2.png",
   },
   {
+    index: 3,
     title: "Inculcation of Government Schemes Stage",
     duration: "48 Hours",
     objective: "Integrate relevant government initiatives into the solution.",
@@ -36,6 +39,7 @@ const mentorshipStages = [
     image: "/image3.png",
   },
   {
+    index: 4,
     title: "TECHNICAL ROUND STAGE",
     duration: "48 Hours",
     objective: "Assess the technical viability of the solution.",
@@ -46,6 +50,7 @@ const mentorshipStages = [
     image: "/image4.png",
   },
   {
+    index: 5,
     title: "PITCH STAGE",
     duration: "48 Hours",
     objective: "Present the solution to judges and stakeholders.",
@@ -56,6 +61,7 @@ const mentorshipStages = [
     image: "/image5.png",
   },
   {
+    index: 6,
     title: "MENTORSHIP FORMAT",
     duration: "Throughout the Hackathon",
     objective: "Provide continuous mentorship and support.",
@@ -68,6 +74,7 @@ const mentorshipStages = [
 ];
 
 const MentorshipStage = ({
+  index,
   title,
   duration,
   objective,
@@ -108,7 +115,7 @@ const MentorshipStagesList = () => {
   const handleScroll = (e) => {
     const deltaY = e.deltaY;
 
-    // If the index is >= 5, stop custom scroll behavior, let the page scroll
+    // If the index is >= 6, allow default scrolling
     if (currentStageIndex >= 5) {
       return; // Don't block default page scrolling
     }
@@ -148,7 +155,7 @@ const MentorshipStagesList = () => {
   return (
     <div
       id="mentorship-container"
-      className="container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8"
+      className={`container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 ${currentStage.index < 6 ? 'sticky top-0' : ''} `}
       style={{ minHeight: "80vh" }}
     >
       {/* Left Section: Image */}
@@ -169,13 +176,15 @@ const MentorshipStagesList = () => {
       </div>
 
       {/* Static Content: Heading and Intro Paragraph */}
-      <div className="w-full lg:w-1/2">
-        <h1 className="text-xl hidden md:flex lg:text-5xl font-bold mb-4 text-center">
-          HACKATHON MENTORSHIP AND COHORT STAGES
-        </h1>
-        <p className="text-sm hidden md:flex lg:text-xl mb-6 text-center">
-          The mentorship program is designed to support participants throughout the hackathon, providing guidance and expertise at each stage of development. Participants will progress through five key stages, each structured to foster collaboration and innovation.
-        </p>
+      <div className={`w-full lg:w-1/2 ${currentStage.index < 6 ? 'sticky top-0' : ''}`}>
+        <div className="mb-[5vw]">
+          <h1 className="text-xl hidden md:flex lg:text-5xl font-bold mb-4 text-center">
+            HACKATHON MENTORSHIP AND COHORT STAGES
+          </h1>
+          <p className="text-sm hidden md:flex lg:text-xl mb-6 text-center">
+            The mentorship program is designed to support participants throughout the hackathon, providing guidance and expertise at each stage of development. Participants will progress through five key stages, each structured to foster collaboration and innovation.
+          </p>
+        </div>
 
         {/* Display the current stage content */}
         <MentorshipStage

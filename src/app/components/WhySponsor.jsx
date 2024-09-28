@@ -43,7 +43,7 @@ function WhySponsor() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        Why Sponsor
+        Why Sponsor ?
       </motion.h2>
 
       {/* Paragraphs */}
