@@ -2,6 +2,10 @@
 import Link from "next/link";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaSquareWhatsapp } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   const ref = useRef(null);
@@ -78,7 +82,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <button className="border border-gray-300 rounded-full py-1 px-3 text-base">
-                  Instagram
+                <FaInstagramSquare />
                 </button>
               </a>
               <a
@@ -87,7 +91,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <button className="border border-gray-300 rounded-full py-1 px-6 text-base">
-                  X
+                <FaTwitterSquare />
                 </button>
               </a>
               <a
@@ -96,7 +100,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <button className="border border-gray-300 rounded-full py-1 px-3 text-base">
-                  Whatsapp
+                <FaSquareWhatsapp />
                 </button>
               </a>
               <a
@@ -105,7 +109,8 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <button className="border border-gray-300 rounded-full py-1 px-3 text-base">
-                  Facebook
+                <FaFacebookSquare />
+
                 </button>
               </a>
             </div>
