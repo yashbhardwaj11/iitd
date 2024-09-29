@@ -82,7 +82,7 @@ const MentorshipStage = ({
   expectedOutcomes,
 }) => {
   return (
-    <div className="w-full lg:w-1/2">
+    <div className="w-full lg:w-1/2  ">
       <div className="w-[80vw] md:w-[50vw]">
         <h2 className="text-lg lg:text-3xl font-bold mb-4">✶ {title}</h2>
         <div className="space-y-2 border-l-2 border-green-400 pl-4">
@@ -154,7 +154,7 @@ const MentorshipStagesList = () => {
   return (
     <div
       id="mentorship-container"
-      className={`container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 ${currentStage.index < 6 ? 'sticky top-0' : ''} `}
+      className={`container mx-auto p-4 lg:p-8 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8  `}
       style={{ minHeight: "80vh" }}
     >
       {/* Left Section: Image */}
@@ -175,7 +175,7 @@ const MentorshipStagesList = () => {
       </div>
 
       {/* Static Content: Heading and Intro Paragraph */}
-      <div className={`w-full lg:w-1/2 ${currentStage.index < 6 ? 'sticky top-0' : ''}`}>
+      <div className={`w-full lg:w-1/2 `}>
         <div className="mb-[5vw]">
           <h1 className="text-xl hidden md:flex lg:text-5xl font-bold mb-4 text-center">
             HACKATHON MENTORSHIP AND COHORT STAGES
@@ -194,6 +194,7 @@ const MentorshipStagesList = () => {
           mentorshipFocus={currentStage.mentorshipFocus}
           feedbackLoops={currentStage.feedbackLoops}
           expectedOutcomes={currentStage.expectedOutcomes}
+          
         />
       </div>
     </div>

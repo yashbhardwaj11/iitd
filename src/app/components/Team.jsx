@@ -127,7 +127,7 @@ export default function Team() {
               whileHover={{ borderRadius: '0%', transition: { duration: 0.5, ease: 'easeInOut' } }}
             >
               <motion.img
-                src="/adarsh-hover.png"
+                src="/Adarsh-hover.png"
                 alt="Adarsh Gautam Hover"
                 className="absolute inset-0 w-full h-full object-cover"
                 initial={{ scale: 1 }}

@@ -99,11 +99,10 @@ const ImageCard = ({ src, index }) => {
       className="relative flex items-center justify-center w-full h-80 px-4" // Added px-4 for spacing between slides
       transition={{ duration: 0.5 }}
     >
-      <Image
+      <img
         src={src}
         alt={`Carousel Image ${index}`}
-        width={300} // Set width for uniformity
-        height={300} // Set height for uniformity
+      
         className="rounded-lg object-cover w-full h-full" // Use object-cover to fill the container
       />
     </motion.div>

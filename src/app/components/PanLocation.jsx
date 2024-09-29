@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const PanIndiaMap = () => {
   return (
-    <div className="flex flex-col lg:flex-row w-full  min-h-screen pr-4 md:pr-20 lg:pr-32 relative z-10">
+    <div className="flex flex-col lg:flex-row w-full  pr-4 md:pr-20 lg:pr-32 relative z-10">
       {/* Left Section (Text + Image) */}
       <div className="flex flex-col lg:w-1/2 h-full">
         {/* Top Text */}
@@ -14,7 +14,7 @@ const PanIndiaMap = () => {
 
         {/* Bottom Image */}
         <div className="w-full h-auto mt-4 md:mt-8 px-2 sm:px-4 md:px-10">
-          <Image
+          <img
             src="/india.png" 
             alt="Map showing states"
             className="w-full h-auto object-contain"
@@ -24,7 +24,7 @@ const PanIndiaMap = () => {
 
       {/* Right Section (Image as tall as text + image) */}
       <div className="flex bg-[#007F40] justify-center items-center lg:w-1/2  mt-6 md:mt-0">
-        <Image
+        <img
           src="/indiabg.png" // Replace with actual image path
           alt="Pan India locations map"
           className="h-full w-full object-contain"
